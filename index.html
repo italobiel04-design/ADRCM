@@ -1,0 +1,2993 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADMRCM — Assembleia de Deus Ministério Revelando Cristo ao Mundo</title>
+    <meta
+      name="description"
+      content="Portal oficial da Assembleia de Deus Ministério Revelando Cristo ao Mundo (ADMRCM): Mural da Igreja, Pedidos de Oração, Tesouraria, Secretaria, Diretoria Geral e Missões."
+    />
+    <meta property="og:title" content="ADMRCM — Ministério Revelando Cristo ao Mundo" />
+    <meta
+      property="og:description"
+      content="Comunhão, Palavra, Oração e Gestão Ministerial da ADMRCM."
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Google Fonts: Playfair Display (Display/Scripture), Plus Jakarta Sans (UI/Body), JetBrains Mono (Financial & Tabular Data) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome 6.5.1 CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: {
+                950: '#050E21',
+                900: '#091836',
+                800: '#0F2552',
+                700: '#163573',
+              },
+              royal: {
+                700: '#1D4ED8',
+                600: '#2563EB',
+                500: '#3B82F6',
+              },
+              cyanbrand: {
+                600: '#0891B2',
+                500: '#06B6D4',
+                400: '#22D3EE',
+              },
+            },
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+              serif: ['"Playfair Display"', 'Georgia', 'serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+        background-color: #f8fafc;
+        color: #0f172a;
+        -webkit-font-smoothing: antialiased;
+      }
+      .tabular-nums {
+        font-variant-numeric: tabular-nums;
+      }
+      .text-balance {
+        text-wrap: balance;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+      .fade-enter {
+        animation: fadeSlideUp 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      @keyframes fadeSlideUp {
+        from {
+          opacity: 0;
+          transform: translateY(6px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      /* Custom subtle scrollbar */
+      ::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col bg-slate-50 text-slate-900">
+    <!-- ==================== TOP NAVIGATION BAR (3-ZONE CONTRACT) ==================== -->
+    <header class="sticky top-0 z-40 bg-navy-900/95 backdrop-blur-md border-b border-navy-800 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-8">
+        <!-- Zone 1: Brand Wordmark + Globe Emblem -->
+        <button
+          type="button"
+          onclick="switchView('social')"
+          class="flex items-center gap-3 text-left whitespace-nowrap shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyanbrand-400 rounded-md py-1"
+        >
+          <svg
+            class="w-9 h-9 shrink-0"
+            viewBox="0 0 64 64"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <!-- Outer ring of united people holding hands -->
+            <circle cx="32" cy="32" r="28" stroke="#22D3EE" stroke-width="1.6" stroke-dasharray="3 3" />
+            <!-- Globe sphere -->
+            <circle cx="32" cy="32" r="17" fill="#1D4ED8" stroke="#22D3EE" stroke-width="1.75" />
+            <ellipse cx="32" cy="32" rx="8.5" ry="17" stroke="#67E8F9" stroke-width="1.2" opacity="0.85" />
+            <path d="M15.5 27H48.5M15.5 37H48.5" stroke="#67E8F9" stroke-width="1.2" opacity="0.85" />
+            <!-- Cross at center of globe -->
+            <path d="M32 21V43M25 29H39" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" />
+            <!-- Stylized people heads & linked arms encircling globe -->
+            <circle cx="32" cy="7" r="2.7" fill="#22D3EE" />
+            <circle cx="52" cy="17" r="2.5" fill="#FFFFFF" />
+            <circle cx="56" cy="37" r="2.5" fill="#22D3EE" />
+            <circle cx="43" cy="54" r="2.5" fill="#FFFFFF" />
+            <circle cx="21" cy="54" r="2.5" fill="#22D3EE" />
+            <circle cx="8" cy="37" r="2.5" fill="#FFFFFF" />
+            <circle cx="12" cy="17" r="2.5" fill="#22D3EE" />
+            <path
+              d="M15 19C20 11 44 11 49 19M54 22C58 29 58 37 53 43M48 51C39 58 25 58 16 51M11 43C6 37 6 29 10 22"
+              stroke="#FFFFFF"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              opacity="0.9"
+            />
+          </svg>
+          <span class="font-serif text-xl font-bold tracking-tight text-white">ADMRCM</span>
+        </button>
+
+        <!-- Zone 2: Clean Single-Line Nav Links -->
+        <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-200" aria-label="Navegação Principal">
+          <button
+            type="button"
+            id="nav-mural"
+            onclick="navigateSection('social', 'feed-section')"
+            class="hover:text-cyanbrand-400 transition-colors whitespace-nowrap shrink-0 py-1 border-b-2 border-cyanbrand-400 text-white"
+          >
+            Mural da Igreja
+          </button>
+          <button
+            type="button"
+            id="nav-cultos"
+            onclick="navigateSection('social', 'cultos-section')"
+            class="hover:text-cyanbrand-400 transition-colors whitespace-nowrap shrink-0 py-1 border-b-2 border-transparent"
+          >
+            Cultos & Agenda
+          </button>
+          <button
+            type="button"
+            id="nav-missoes"
+            onclick="navigateSection('social', 'missoes-destaque')"
+            class="hover:text-cyanbrand-400 transition-colors whitespace-nowrap shrink-0 py-1 border-b-2 border-transparent"
+          >
+            Missões & Obras
+          </button>
+          <button
+            type="button"
+            id="nav-oracao"
+            onclick="openPrayerModal()"
+            class="hover:text-cyanbrand-400 transition-colors whitespace-nowrap shrink-0 py-1 border-b-2 border-transparent"
+          >
+            Pedido de Oração
+          </button>
+        </nav>
+
+        <!-- Zone 3: Single Primary Action -->
+        <div class="flex items-center gap-3 shrink-0">
+          <button
+            type="button"
+            id="header-admin-btn"
+            onclick="handleAdminHeaderClick()"
+            class="px-4 py-2 text-sm font-semibold rounded-lg bg-cyanbrand-500 hover:bg-cyanbrand-400 text-navy-950 transition-colors whitespace-nowrap shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-white flex items-center gap-2"
+          >
+            <i class="fa-solid fa-shield-halved text-xs"></i>
+            <span id="header-admin-label">Painel Administrativo</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==================== MOBILE QUICK NAV (Subtle, only on small screens) ==================== -->
+    <div class="md:hidden bg-navy-800 border-b border-navy-700 text-slate-200 px-4 py-2 flex items-center gap-4 overflow-x-auto text-xs font-medium">
+      <button type="button" onclick="navigateSection('social', 'feed-section')" class="whitespace-nowrap shrink-0 hover:text-cyanbrand-400">
+        Mural
+      </button>
+      <button type="button" onclick="navigateSection('social', 'cultos-section')" class="whitespace-nowrap shrink-0 hover:text-cyanbrand-400">
+        Cultos
+      </button>
+      <button type="button" onclick="navigateSection('social', 'missoes-destaque')" class="whitespace-nowrap shrink-0 hover:text-cyanbrand-400">
+        Missões
+      </button>
+      <button type="button" onclick="openPrayerModal()" class="whitespace-nowrap shrink-0 text-cyanbrand-400">
+        Pedir Oração
+      </button>
+    </div>
+
+    <!-- ==================== TOAST NOTIFICATION ==================== -->
+    <div
+      id="toast-container"
+      class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"
+      aria-live="polite"
+    ></div>
+
+    <!-- ==================== MAIN VIEW 1: ÁREA DE REDE SOCIAL (MURAL DA IGREJA) ==================== -->
+    <main id="view-social" class="flex-1">
+      <!-- Institutional Hero Split -->
+      <section class="bg-navy-900 text-white border-b border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+            <!-- Left Content -->
+            <div class="lg:col-span-7 flex flex-col justify-center">
+              <p class="text-xs font-semibold uppercase tracking-widest text-cyanbrand-400 mb-3">
+                Igreja Evangélica · Comunhão e Evangelismo Global
+              </p>
+              <h1 class="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] font-bold leading-tight text-white text-balance">
+                Assembleia de Deus Ministério Revelando Cristo ao Mundo
+              </h1>
+              <p class="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+                Um povo unido pela Palavra, fortalecido pela oração e enviado às nações. Acompanhe o mural da igreja,
+                compartilhe testemunhos e envie seu pedido de oração.
+              </p>
+              <div class="mt-7 flex flex-wrap items-center gap-4">
+                <button
+                  type="button"
+                  onclick="focusComposer()"
+                  class="px-5 py-2.5 rounded-lg bg-royal-600 hover:bg-royal-500 text-white font-semibold text-sm transition-colors flex items-center gap-2 whitespace-nowrap shrink-0"
+                >
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  <span>Publicar no Mural</span>
+                </button>
+                <button
+                  type="button"
+                  onclick="openPrayerModal()"
+                  class="px-5 py-2.5 rounded-lg border border-cyanbrand-400/60 hover:bg-navy-800 text-cyanbrand-400 font-semibold text-sm transition-colors flex items-center gap-2 whitespace-nowrap shrink-0"
+                >
+                  <i class="fa-solid fa-hands-praying"></i>
+                  <span>Fazer Pedido de Oração</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Hero Sanctuary Photo -->
+            <div class="lg:col-span-5">
+              <div class="relative h-64 sm:h-72 lg:h-full min-h-[260px] rounded-xl overflow-hidden border border-navy-700 bg-navy-800">
+                <img
+                  src="/src/assets/images/admrcm_hero_sanctuary_1794967011956.jpg"
+                  alt="Santuário da Assembleia de Deus Ministério Revelando Cristo ao Mundo"
+                  referrerpolicy="no-referrer"
+                  onerror="handleImageFallback(this, 'Santuário ADMRCM')"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/30 to-transparent"></div>
+                <div class="absolute bottom-4 left-5 right-5 flex items-end justify-between gap-4">
+                  <div>
+                    <p class="text-xs font-medium text-cyanbrand-400">Templo Sede · Cultos Presenciais</p>
+                    <p class="text-sm font-semibold text-white mt-0.5">Domingos às 09h00 e 18h00</p>
+                  </div>
+                  <span class="text-xs font-mono text-slate-200 tabular-nums">ADMRCM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Full-width 4-Column Church Pulse Strip -->
+          <div class="mt-10 pt-8 border-t border-navy-800 grid grid-cols-2 lg:grid-cols-4 gap-6">
+            <div>
+              <p class="text-xs text-slate-400">Membros & Obreiros</p>
+              <p id="pulse-members" class="mt-1 text-2xl font-semibold text-white font-mono tabular-nums">0</p>
+            </div>
+            <div>
+              <p class="text-xs text-slate-400">Congregações Ativas</p>
+              <p id="pulse-branches" class="mt-1 text-2xl font-semibold text-white font-mono tabular-nums">0</p>
+            </div>
+            <div>
+              <p class="text-xs text-slate-400">Pedidos em Oração</p>
+              <p id="pulse-prayers" class="mt-1 text-2xl font-semibold text-cyanbrand-400 font-mono tabular-nums">0</p>
+            </div>
+            <div>
+              <p class="text-xs text-slate-400">Frentes Missionárias</p>
+              <p id="pulse-missions" class="mt-1 text-2xl font-semibold text-white font-mono tabular-nums">0</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Feed & Sidebar Workspace -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- LEFT / MAIN FEED COLUMN (8 cols) -->
+          <div id="feed-section" class="lg:col-span-8 space-y-6">
+            <!-- Create Post Composer -->
+            <div class="bg-white border border-slate-200 rounded-xl p-5 sm:p-6">
+              <div class="flex items-center justify-between gap-4 mb-4">
+                <h2 class="text-lg font-bold text-navy-900">Compartilhar no Mural da Igreja</h2>
+                <span class="text-xs text-slate-500">Membros e Visitantes</span>
+              </div>
+
+              <form id="post-form" onsubmit="handleCreatePost(event)" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="post-author" class="block text-xs font-semibold text-slate-700 mb-1.5">Seu Nome</label>
+                    <input
+                      id="post-author"
+                      type="text"
+                      required
+                      placeholder="Ex.: Irmã Patrícia Souza"
+                      class="w-full px-3.5 py-2 text-sm rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-royal-600 focus:border-royal-600"
+                    />
+                  </div>
+                  <div>
+                    <label for="post-category" class="block text-xs font-semibold text-slate-700 mb-1.5">Categoria</label>
+                    <select
+                      id="post-category"
+                      class="w-full px-3.5 py-2 text-sm rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-royal-600 focus:border-royal-600"
+                    >
+                      <option value="Testemunho">Testemunho</option>
+                      <option value="Palavra Pastoral">Palavra Pastoral</option>
+                      <option value="Aviso">Aviso da Igreja</option>
+                      <option value="Evento">Evento / Culto</option>
+                      <option value="Missões">Missões & Ação Social</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="post-content" class="block text-xs font-semibold text-slate-700 mb-1.5">Mensagem</label>
+                  <textarea
+                    id="post-content"
+                    rows="3"
+                    required
+                    placeholder="Compartilhe um testemunho, reflexão bíblica ou aviso com a igreja..."
+                    class="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-royal-600 focus:border-royal-600 resize-y"
+                  ></textarea>
+                </div>
+
+                <!-- Optional Image Attachment -->
+                <div class="flex flex-wrap items-center justify-between gap-4 pt-1">
+                  <div class="flex flex-wrap items-center gap-3">
+                    <label
+                      for="post-image-file"
+                      class="cursor-pointer inline-flex items-center gap-2 px-3.5 py-2 rounded-lg border border-slate-300 hover:bg-slate-50 text-xs font-semibold text-slate-700 transition-colors"
+                    >
+                      <i class="fa-regular fa-image text-royal-600"></i>
+                      <span>Anexar Foto</span>
+                      <input
+                        id="post-image-file"
+                        type="file"
+                        accept="image/*"
+                        onchange="handlePostImageSelect(event)"
+                        class="hidden"
+                      />
+                    </label>
+
+                    <select
+                      id="post-preset-image"
+                      onchange="handlePostPresetImage(this.value)"
+                      aria-label="Selecionar imagem da galeria da igreja"
+                      class="px-3 py-2 text-xs font-medium rounded-lg border border-slate-300 bg-white text-slate-700 focus:outline-none focus:ring-2 focus:ring-royal-600"
+                    >
+                      <option value="">Ou escolher foto da galeria...</option>
+                      <option value="/src/assets/images/admrcm_social_worship_1794967011512.jpg">Culto de Adoração</option>
+                      <option value="/src/assets/images/admrcm_water_baptism_1794967012668.jpg">Batismo nas Águas</option>
+                      <option value="/src/assets/images/admrcm_mission_outreach_1794967010961.jpg">Ação Social & Missões</option>
+                      <option value="/src/assets/images/admrcm_hero_sanctuary_1794967011956.jpg">Templo Sede</option>
+                    </select>
+
+                    <span id="post-image-status" class="text-xs text-slate-500 hidden"></span>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="px-5 py-2 rounded-lg bg-royal-600 hover:bg-royal-700 text-white text-sm font-semibold transition-colors flex items-center gap-2 whitespace-nowrap shrink-0"
+                  >
+                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                    <span>Publicar</span>
+                  </button>
+                </div>
+
+                <!-- Image Preview Box -->
+                <div id="post-image-preview-wrap" class="hidden relative rounded-lg overflow-hidden border border-slate-200 bg-slate-100 max-h-56">
+                  <img id="post-image-preview" src="" alt="Prévia da imagem" class="w-full max-h-56 object-cover" />
+                  <button
+                    type="button"
+                    onclick="clearPostImage()"
+                    class="absolute top-2 right-2 px-2.5 py-1 rounded-md bg-navy-900/80 text-white text-xs font-medium hover:bg-navy-950"
+                  >
+                    <i class="fa-solid fa-xmark mr-1"></i>Remover
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Feed Filters & Search -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+              <div class="flex items-center gap-1 p-1 bg-slate-200/70 rounded-lg overflow-x-auto" role="tablist" aria-label="Filtrar publicações">
+                <button
+                  type="button"
+                  onclick="setFeedFilter('Todas')"
+                  data-feed-filter="Todas"
+                  class="feed-filter-btn px-3 py-1.5 text-xs font-semibold rounded-md transition-colors whitespace-nowrap shrink-0 bg-white text-navy-900 shadow-sm"
+                >
+                  Todas
+                </button>
+                <button
+                  type="button"
+                  onclick="setFeedFilter('Palavra Pastoral')"
+                  data-feed-filter="Palavra Pastoral"
+                  class="feed-filter-btn px-3 py-1.5 text-xs font-semibold rounded-md transition-colors whitespace-nowrap shrink-0 text-slate-600 hover:text-navy-900"
+                >
+                  Palavra
+                </button>
+                <button
+                  type="button"
+                  onclick="setFeedFilter('Testemunho')"
+                  data-feed-filter="Testemunho"
+                  class="feed-filter-btn px-3 py-1.5 text-xs font-semibold rounded-md transition-colors whitespace-nowrap shrink-0 text-slate-600 hover:text-navy-900"
+                >
+                  Testemunhos
+                </button>
+                <button
+                  type="button"
+                  onclick="setFeedFilter('Aviso')"
+                  data-feed-filter="Aviso"
+                  class="feed-filter-btn px-3 py-1.5 text-xs font-semibold rounded-md transition-colors whitespace-nowrap shrink-0 text-slate-600 hover:text-navy-900"
+                >
+                  Avisos
+                </button>
+                <button
+                  type="button"
+                  onclick="setFeedFilter('Missões')"
+                  data-feed-filter="Missões"
+                  class="feed-filter-btn px-3 py-1.5 text-xs font-semibold rounded-md transition-colors whitespace-nowrap shrink-0 text-slate-600 hover:text-navy-900"
+                >
+                  Missões
+                </button>
+              </div>
+
+              <div class="relative w-full sm:w-56">
+                <i class="fa-solid fa-magnifying-glass text-xs text-slate-400 absolute left-3 top-1/2 -translate-y-1/2"></i>
+                <input
+                  id="feed-search"
+                  type="text"
+                  oninput="renderFeed()"
+                  placeholder="Buscar no mural..."
+                  class="w-full pl-8 pr-3 py-1.5 text-xs rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-royal-600"
+                />
+              </div>
+            </div>
+
+            <!-- Feed Stream Container -->
+            <div id="feed-list" class="space-y-5"></div>
+
+            <!-- Missions Highlight Section below Feed -->
+            <div id="missoes-destaque" class="pt-6 border-t border-slate-200">
+              <div class="flex items-center justify-between gap-4 mb-5">
+                <div>
+                  <h2 class="text-xl font-bold text-navy-900">Missões, Evangelismo e Obra Social</h2>
+                  <p class="text-sm text-slate-600 mt-0.5">Frentes missionárias alimentadas pela diretoria da ADMRCM</p>
+                </div>
+              </div>
+              <div id="public-missions-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-5"></div>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDEBAR (4 cols) -->
+          <aside class="lg:col-span-4 space-y-6">
+            <!-- Versículo do Dia -->
+            <div class="bg-navy-900 text-white rounded-xl p-6 border border-navy-800">
+              <div class="flex items-center justify-between gap-3 mb-4">
+                <span class="text-xs font-semibold uppercase tracking-widest text-cyanbrand-400">Versículo do Dia</span>
+                <button
+                  type="button"
+                  onclick="nextVerse()"
+                  title="Trocar versículo"
+                  class="text-xs font-medium text-slate-300 hover:text-cyanbrand-400 transition-colors flex items-center gap-1.5"
+                >
+                  <i class="fa-solid fa-arrows-rotate"></i>
+                  <span>Próximo</span>
+                </button>
+              </div>
+              <blockquote id="verse-text" class="font-serif italic text-lg leading-relaxed text-slate-100">
+                "E disse-lhes: Ide por todo o mundo, pregai o evangelho a toda criatura."
+              </blockquote>
+              <div class="mt-4 pt-4 border-t border-navy-800 flex items-center justify-between gap-3">
+                <cite id="verse-ref" class="not-italic text-sm font-semibold text-cyanbrand-400">Marcos 16:15</cite>
+                <button
+                  type="button"
+                  onclick="shareVerseToFeed()"
+                  class="text-xs font-medium text-slate-300 hover:text-white transition-colors"
+                >
+                  <i class="fa-solid fa-share-nodes mr-1"></i>Postar no Mural
+                </button>
+              </div>
+            </div>
+
+            <!-- Avisos de Próximos Cultos -->
+            <div id="cultos-section" class="bg-white border border-slate-200 rounded-xl p-6">
+              <div class="flex items-center justify-between gap-3 mb-4">
+                <h3 class="text-base font-bold text-navy-900">Próximos Cultos & Agenda</h3>
+                <i class="fa-regular fa-calendar text-royal-600"></i>
+              </div>
+              <div class="divide-y divide-slate-100" id="services-schedule-list"></div>
+            </div>
+
+            <!-- Mural de Pedidos de Oração -->
+            <div class="bg-white border border-slate-200 rounded-xl p-6">
+              <div class="flex items-center justify-between gap-3 mb-2">
+                <h3 class="text-base font-bold text-navy-900">Corrente de Oração</h3>
+                <button
+                  type="button"
+                  onclick="openPrayerModal()"
+                  class="text-xs font-semibold text-royal-600 hover:text-royal-700"
+                >
+                  + Novo Pedido
+                </button>
+              </div>
+              <p class="text-xs text-slate-500 mb-4">Interceda pelos irmãos e registre seu clamor.</p>
+              <div id="prayer-wall-list" class="space-y-3 max-h-80 overflow-y-auto pr-1"></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== MAIN VIEW 2: PAINEL ADMINISTRATIVO ==================== -->
+    <main id="view-admin" class="hidden flex-1 bg-slate-100">
+      <!-- Admin Header Strip -->
+      <div class="bg-navy-950 text-white border-b border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <p class="text-xs font-medium text-cyanbrand-400">Administração Eclesiástica · ADMRCM</p>
+            <h1 class="text-xl sm:text-2xl font-bold text-white mt-0.5">Painel Administrativo</h1>
+          </div>
+          <div class="flex flex-wrap items-center gap-3">
+            <div class="text-right mr-2">
+              <p id="admin-user-name" class="text-sm font-semibold text-white">Pr. João Carlos</p>
+              <p id="admin-user-role" class="text-xs text-cyanbrand-400">Diretoria Geral</p>
+            </div>
+            <button
+              type="button"
+              onclick="switchView('social')"
+              class="px-3.5 py-2 rounded-lg border border-navy-700 hover:bg-navy-800 text-xs font-semibold text-slate-200 transition-colors whitespace-nowrap shrink-0"
+            >
+              <i class="fa-solid fa-arrow-left mr-1.5"></i>Ver Mural Público
+            </button>
+            <button
+              type="button"
+              onclick="logoutAdmin()"
+              class="px-3.5 py-2 rounded-lg bg-rose-600/90 hover:bg-rose-600 text-xs font-semibold text-white transition-colors whitespace-nowrap shrink-0"
+            >
+              <i class="fa-solid fa-right-from-bracket mr-1.5"></i>Sair
+            </button>
+          </div>
+        </div>
+
+        <!-- Admin Navigation Tabs -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 overflow-x-auto">
+          <button
+            type="button"
+            onclick="switchAdminTab('tesouraria')"
+            data-admin-tab="tesouraria"
+            class="admin-tab-btn px-4 py-3 text-sm font-semibold border-b-2 border-cyanbrand-400 text-white whitespace-nowrap shrink-0 flex items-center gap-2"
+          >
+            <i class="fa-solid fa-coins text-xs"></i>
+            <span>Tesouraria</span>
+          </button>
+          <button
+            type="button"
+            onclick="switchAdminTab('secretaria')"
+            data-admin-tab="secretaria"
+            class="admin-tab-btn px-4 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-400 hover:text-white whitespace-nowrap shrink-0 flex items-center gap-2"
+          >
+            <i class="fa-solid fa-users text-xs"></i>
+            <span>Secretaria</span>
+          </button>
+          <button
+            type="button"
+            onclick="switchAdminTab('diretoria')"
+            data-admin-tab="diretoria"
+            class="admin-tab-btn px-4 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-400 hover:text-white whitespace-nowrap shrink-0 flex items-center gap-2"
+          >
+            <i class="fa-solid fa-user-shield text-xs"></i>
+            <span>Diretoria Geral & Acessos</span>
+          </button>
+          <button
+            type="button"
+            onclick="switchAdminTab('missoes')"
+            data-admin-tab="missoes"
+            class="admin-tab-btn px-4 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-400 hover:text-white whitespace-nowrap shrink-0 flex items-center gap-2"
+          >
+            <i class="fa-solid fa-earth-americas text-xs"></i>
+            <span>Missão, Evangelismo & Obra Social</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Admin Content Area -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- ==================== TAB A: TESOURARIA ==================== -->
+        <section id="tab-tesouraria" class="admin-tab-panel space-y-6">
+          <!-- KPI Row -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div class="bg-white border border-slate-200 rounded-xl p-5">
+              <p class="text-xs font-medium text-slate-500">Saldo em Caixa Atualizado</p>
+              <p id="kpi-saldo" class="mt-2 text-2xl font-bold font-mono tabular-nums text-navy-900">R$ 0,00</p>
+              <p class="mt-1 text-xs text-slate-500">Disponível em conta e caixa local</p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-xl p-5">
+              <p class="text-xs font-medium text-slate-500">Total de Entradas</p>
+              <p id="kpi-entradas" class="mt-2 text-2xl font-bold font-mono tabular-nums text-emerald-700">R$ 0,00</p>
+              <p class="mt-1 text-xs text-emerald-700 flex items-center gap-1">
+                <i class="fa-solid fa-arrow-trend-up"></i><span>Dízimos e ofertas</span>
+              </p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-xl p-5">
+              <p class="text-xs font-medium text-slate-500">Total de Saídas</p>
+              <p id="kpi-saidas" class="mt-2 text-2xl font-bold font-mono tabular-nums text-rose-700">R$ 0,00</p>
+              <p class="mt-1 text-xs text-rose-700 flex items-center gap-1">
+                <i class="fa-solid fa-arrow-trend-down"></i><span>Despesas e repasses</span>
+              </p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-xl p-5">
+              <p class="text-xs font-medium text-slate-500">Arrecadação em Dízimos</p>
+              <p id="kpi-dizimos" class="mt-2 text-2xl font-bold font-mono tabular-nums text-royal-700">R$ 0,00</p>
+              <p class="mt-1 text-xs text-slate-500">Soma das contribuições nominais</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <!-- Form Novo Lançamento -->
+            <div class="lg:col-span-4 bg-white border border-slate-200 rounded-xl p-6">
+              <h2 class="text-base font-bold text-navy-900 mb-4">Novo Lançamento Financeiro</h2>
+              <form id="treasury-form" onsubmit="handleAddTransaction(event)" class="space-y-3.5">
+                <div>
+                  <label for="tx-type" class="block text-xs font-semibold text-slate-700 mb-1">Tipo de Movimento</label>
+                  <select
+                    id="tx-type"
+                    onchange="updateTxCategoryOptions()"
+                    class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-royal-600"
+                  >
+                    <option value="Entrada">Entrada (+)</option>
+                    <option value="Saída">Saída (-)</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="tx-category" class="block text-xs font-semibold text-slate-700 mb-1">Categoria</label>
+                  <select
+                    id="tx-category"
+                    class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-royal-600"
+                  ></select>
+                </div>
+
+                <div>
+                  <label for="tx-desc" class="block text-xs font-semibold text-slate-700 mb-1">Descrição / Contribuinte</label>
+                  <input
+                    id="tx-desc"
+                    type="text"
+                    required
+                    placeholder="Ex.: Dízimo - Irmão Carlos Alberto"
+                    class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-royal-600"
+                  />
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <label for="tx-amount" class="block text-xs font-semibold text-slate-700 mb-1">Valor (R$)</label>
+                    <input
+                      id="tx-amount"
+                      type="number"
+                      step="0.01"
+                      min="0.01"
+                      required
+                      placeholder="0,00"
+                      class="w-full px-3 py-2 text-sm font-mono rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-royal-600"
+                    />
+                  </div>
+                  <div>
+                    <label for="tx-date" class="block text-xs font-semibold text-slate-700 mb-1">Data</label>
+                    <input
+                      id="tx-date"
+                      type="date"
+                      required
+                      class="w-full px-3 py-2 text-sm font-mono rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-royal-600"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="tx-congregation" class="block text-xs font-semibold text-slate-700 mb-1">Congregação</label>
+                  <select
+                    id="tx-congregation"
+                    class="tx-congregation-select w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-royal-600"
+                  ></select>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full py-2.5 rounded-lg bg-royal-600 hover:bg-royal-700 text-white text-sm font-semibold transition-colors"
+                >
+                  Registrar Lançamento
+                </button>
+              </form>
+            </div>
+
+            <!-- Tabela de Lançamentos -->
+            <div class="lg:col-span-8 bg-white border border-slate-200 rounded-xl overflow-hidden">
+              <div class="p-5 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div>
+                  <h2 class="text-base font-bold text-navy-900">Livro Caixa & Lançamentos</h2>
+                  <p class="text-xs text-slate-500 mt-0.5">Histórico completo de entradas, dízimos, ofertas e despesas</p>
+                </div>
+                <div class="flex flex-wrap items-center gap-2">
+                  <select
+                    id="tx-filter-type"
+                    onchange="renderTreasury()"
+                    class="px-3 py-1.5 text-xs font-medium rounded-lg border border-slate-300 bg-white"
+                  >
+                    <option value="Todos">Todos os Tipos</option>
+                    <option value="Entrada">Somente Entradas</option>
+                    <option value="Saída">Somente Saídas</option>
+                  </select>
+                  <input
+                    id="tx-search"
+                    type="text"
+                    oninput="renderTreasury()"
+                    placeholder="Buscar descrição..."
+                    class="px-3 py-1.5 text-xs rounded-lg border border-slate-300 w-40"
+                  />
+                  <button
+                    type="button"
+                    onclick="exportTreasuryCSV()"
+                    class="px-3 py-1.5 rounded-lg border border-slate-300 hover:bg-slate-50 text-xs font-semibold text-slate-700 whitespace-nowrap shrink-0"
+                  >
+                    <i class="fa-solid fa-file-csv mr-1 text-royal-600"></i>Exportar CSV
+                  </button>
+                </div>
+              </div>
+
+              <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                  <thead>
+                    <tr class="bg-slate-50 border-b border-slate-200 text-xs font-semibold text-slate-600">
+                      <th class="py-3 px-4">Data</th>
+                      <th class="py-3 px-4">Descrição</th>
+                      <th class="py-3 px-4">Categoria</th>
+                      <th class="py-3 px-4">Tipo</th>
+                      <th class="py-3 px-4 text-right">Valor</th>
+                      <th class="py-3 px-4 text-right">Ações</th>
+                    </tr>
+                  </thead>
+                  <tbody id="treasury-table-body" class="divide-y divide-slate-100 text-sm"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== TAB B: SECRETARIA ==================== -->
+        <section id="tab-secretaria" class="admin-tab-panel hidden space-y-6">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
+            <div class="bg-white border border-slate-200 rounded-xl p-5">
+              <p class="text-xs font-medium text-slate-500">Total no Rol</p>
+              <p id="sec-kpi-total" class="mt-2 text-2xl font-bold font-mono tabular-nums text-navy-900">0</p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-xl p-5">
+              <p class="text-xs font-medium text-slate-500">Obreiros Consagrados</p>
+              <p id="sec-kpi-obreiros" class="mt-2 text-2xl font-bold font-mono tabular-nums text-royal-700">0</p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-xl p-5">
+              <p class="text-xs font-medium text-slate-500">Batizados nas Águas</p>
+              <p id="sec-kpi-batizados" class="mt-2 text-2xl font-bold font-mono tabular-nums text-cyanbrand-600">0</p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-xl p-5">
+              <p class="text-xs font-medium text-slate-500">Em Preparação p/ Batismo</p>
+              <p id="sec-kpi-preparacao" class="mt-2 text-2xl font-bold font-mono tabular-nums text-amber-600">0</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <!-- Form Cadastro de Membro -->
+            <div class="lg:col-span-4 bg-white border border-slate-200 rounded-xl p-6">
+              <h2 class="text-base font-bold text-navy-900 mb-4">Cadastrar Membro / Obreiro</h2>
+              <form id="member-form" onsubmit="handleAddMember(event)" class="space-y-3.5">
+                <div>
+                  <label for="mem-name" class="block text-xs font-semibold text-slate-700 mb-1">Nome Completo</label>
+                  <input
+                    id="mem-name"
+                    type="text"
+                    required
+                    placeholder="Ex.: Ana Beatriz Ferreira"
+                    class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-royal-600"
+                  />
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <label for="mem-role" class="block text-xs font-semibold text-slate-700 mb-1">Cargo Ministerial</label>
+                    <select
+                      id="mem-role"
+                      class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-royal-600"
+                    >
+                      <option value="Membro">Membro</option>
+                      <option value="Cooperador(a)">Cooperador(a)</option>
+                      <option value="Diácono">Diácono</option>
+                      <option value="Diaconisa">Diaconisa</option>
+                      <option value="Presbítero">Presbítero</option>
+                      <option value="Evangelista">Evangelista</option>
+                      <option value="Pastor(a)">Pastor(a)</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="mem-phone" class="block text-xs font-semibold text-slate-700 mb-1">Telefone / WhatsApp</label>
+                    <input
+                      id="mem-phone"
+                      type="text"
+                      required
+                      placeholder="(11) 99999-0000"
+                      class="w-full px-3 py-2 text-sm font-mono rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-royal-600"
+                    />
+                  </div>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <label for="mem-baptism" class="block text-xs font-semibold text-slate-700 mb-1">Batismo nas Águas</label>
+                    <select
+                      id="mem-baptism"
+                      class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-royal-600"
+                    >
+                      <option value="Batizado">Batizado(a)</option>
+                      <option value="Em Preparação">Em Preparação</option>
+                      <option value="Não Batizado">Não Batizado(a)</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="mem-baptism-date" class="block text-xs font-semibold text-slate-700 mb-1">Data Batismo</label>
+                    <input
+                      id="mem-baptism-date"
+                      type="date"
+                      class="w-full px-3 py-2 text-sm font-mono rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-royal-600"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label for="mem-congregation" class="block text-xs font-semibold text-slate-700 mb-1">Congregação</label>
+                  <select
+                    id="mem-congregation"
+                    class="tx-congregation-select w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-royal-600"
+                  ></select>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full py-2.5 rounded-lg bg-royal-600 hover:bg-royal-700 text-white text-sm font-semibold transition-colors"
+                >
+                  Adicionar ao Rol de Membros
+                </button>
+              </form>
+            </div>
+
+            <!-- Rol de Membros Table -->
+            <div class="lg:col-span-8 bg-white border border-slate-200 rounded-xl overflow-hidden">
+              <div class="p-5 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div>
+                  <h2 class="text-base font-bold text-navy-900">Rol de Membros, Obreiros & Batismos</h2>
+                  <p class="text-xs text-slate-500 mt-0.5">Gerencie cargos, contatos e situação batismal</p>
+                </div>
+                <div class="flex flex-wrap items-center gap-2">
+                  <select
+                    id="sec-filter-baptism"
+                    onchange="renderSecretaria()"
+                    class="px-3 py-1.5 text-xs font-medium rounded-lg border border-slate-300 bg-white"
+                  >
+                    <option value="Todos">Todos os Status</option>
+                    <option value="Batizado">Batizados</option>
+                    <option value="Em Preparação">Em Preparação</option>
+                    <option value="Não Batizado">Não Batizados</option>
+                  </select>
+                  <input
+                    id="sec-search"
+                    type="text"
+                    oninput="renderSecretaria()"
+                    placeholder="Buscar nome ou cargo..."
+                    class="px-3 py-1.5 text-xs rounded-lg border border-slate-300 w-44"
+                  />
+                </div>
+              </div>
+              <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                  <thead>
+                    <tr class="bg-slate-50 border-b border-slate-200 text-xs font-semibold text-slate-600">
+                      <th class="py-3 px-4">Membro / Obreiro</th>
+                      <th class="py-3 px-4">Cargo</th>
+                      <th class="py-3 px-4">Telefone</th>
+                      <th class="py-3 px-4">Batismo nas Águas</th>
+                      <th class="py-3 px-4">Congregação</th>
+                      <th class="py-3 px-4 text-right">Ações</th>
+                    </tr>
+                  </thead>
+                  <tbody id="secretaria-table-body" class="divide-y divide-slate-100 text-sm"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== TAB C: DIRETORIA GERAL & ACESSOS ==================== -->
+        <section id="tab-diretoria" class="admin-tab-panel hidden space-y-6">
+          <!-- Role Gate Banner if not Diretoria Geral -->
+          <div id="diretoria-lock-notice" class="hidden bg-amber-50 border border-amber-200 rounded-xl p-5 flex items-start gap-3">
+            <i class="fa-solid fa-lock text-amber-600 mt-0.5"></i>
+            <div>
+              <h3 class="text-sm font-bold text-amber-900">Acesso Restrito à Diretoria Geral</h3>
+              <p class="text-xs text-amber-800 mt-1">
+                Você está autenticado com um perfil setorial. Apenas usuários com perfil <strong>Diretoria Geral</strong>
+                podem criar, alterar ou excluir credenciais de acesso administrativo. A visualização da Mesa Diretora e
+                Congregações permanece disponível abaixo.
+              </p>
+            </div>
+          </div>
+
+          <!-- Gestão de Usuários e Senhas -->
+          <div id="access-management-box" class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <div class="lg:col-span-4 bg-white border border-slate-200 rounded-xl p-6">
+              <h2 class="text-base font-bold text-navy-900 mb-1">Criar Usuário & Senha de Acesso</h2>
+              <p class="text-xs text-slate-500 mb-4">Defina credenciais para líderes, tesoureiros e secretários.</p>
+              <form id="user-access-form" onsubmit="handleCreateAdminUser(event)" class="space-y-3.5">
+                <div>
+                  <label for="acc-name" class="block text-xs font-semibold text-slate-700 mb-1">Nome do Líder</label>
+                  <input
+                    id="acc-name"
+                    type="text"
+                    required
+                    placeholder="Ex.: Ev. Lucas Andrade"
+                    class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-royal-600"
+                  />
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <label for="acc-username" class="block text-xs font-semibold text-slate-700 mb-1">Usuário (Login)</label>
+                    <input
+                      id="acc-username"
+                      type="text"
+                      required
+                      placeholder="Ex.: lucas.ev"
+                      class="w-full px-3 py-2 text-sm font-mono rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-royal-600"
+                    />
+                  </div>
+                  <div>
+                    <label for="acc-password" class="block text-xs font-semibold text-slate-700 mb-1">Senha</label>
+                    <input
+                      id="acc-password"
+                      type="text"
+                      required
+                      minlength="4"
+                      placeholder="Mín. 4 caracteres"
+                      class="w-full px-3 py-2 text-sm font-mono rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-royal-600"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label for="acc-role" class="block text-xs font-semibold text-slate-700 mb-1">Nível de Acesso / Cargo</label>
+                  <select
+                    id="acc-role"
+                    class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-royal-600"
+                  >
+                    <option value="Tesoureiro">Tesoureiro</option>
+                    <option value="Secretário">Secretário(a)</option>
+                    <option value="Líder de Missões">Líder de Missões</option>
+                    <option value="Diretoria Geral">Diretoria Geral (Acesso Total)</option>
+                  </select>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full py-2.5 rounded-lg bg-navy-900 hover:bg-navy-800 text-white text-sm font-semibold transition-colors"
+                >
+                  Cadastrar Acesso
+                </button>
+              </form>
+            </div>
+
+            <div class="lg:col-span-8 bg-white border border-slate-200 rounded-xl overflow-hidden">
+              <div class="p-5 border-b border-slate-200 flex items-center justify-between gap-4">
+                <div>
+                  <h2 class="text-base font-bold text-navy-900">Usuários e Senhas Ativos no Sistema</h2>
+                  <p class="text-xs text-slate-500 mt-0.5">Controle de permissões concedidas pela Diretoria Geral</p>
+                </div>
+              </div>
+              <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                  <thead>
+                    <tr class="bg-slate-50 border-b border-slate-200 text-xs font-semibold text-slate-600">
+                      <th class="py-3 px-4">Nome</th>
+                      <th class="py-3 px-4">Usuário</th>
+                      <th class="py-3 px-4">Senha</th>
+                      <th class="py-3 px-4">Perfil / Cargo</th>
+                      <th class="py-3 px-4 text-right">Ações</th>
+                    </tr>
+                  </thead>
+                  <tbody id="admin-users-table-body" class="divide-y divide-slate-100 text-sm"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mesa Diretora & Congregações Filiais -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <!-- Mesa Diretora -->
+            <div class="lg:col-span-5 bg-white border border-slate-200 rounded-xl p-6">
+              <div class="flex items-center justify-between gap-3 mb-4">
+                <h2 class="text-base font-bold text-navy-900">Mesa Diretora — ADMRCM</h2>
+                <span class="text-xs text-slate-500">Mandato Atual</span>
+              </div>
+              <div id="mesa-diretora-list" class="divide-y divide-slate-100"></div>
+            </div>
+
+            <!-- Igrejas Filiais & Congregações -->
+            <div class="lg:col-span-7 bg-white border border-slate-200 rounded-xl p-6">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+                <div>
+                  <h2 class="text-base font-bold text-navy-900">Sede e Congregações Filiais</h2>
+                  <p class="text-xs text-slate-500">Rede de templos vinculados ao Ministério Revelando Cristo ao Mundo</p>
+                </div>
+                <button
+                  type="button"
+                  onclick="toggleBranchForm()"
+                  class="px-3 py-1.5 rounded-lg bg-royal-600 hover:bg-royal-700 text-white text-xs font-semibold whitespace-nowrap shrink-0"
+                >
+                  + Nova Congregação
+                </button>
+              </div>
+
+              <form id="branch-form" onsubmit="handleAddBranch(event)" class="hidden mb-5 p-4 rounded-lg bg-slate-50 border border-slate-200 space-y-3">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <input id="branch-name" type="text" required placeholder="Nome da Congregação" class="px-3 py-2 text-xs rounded-lg border border-slate-300 bg-white" />
+                  <input id="branch-leader" type="text" required placeholder="Dirigente Responsável" class="px-3 py-2 text-xs rounded-lg border border-slate-300 bg-white" />
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <input id="branch-address" type="text" required placeholder="Endereço / Bairro e Cidade" class="px-3 py-2 text-xs rounded-lg border border-slate-300 bg-white" />
+                  <input id="branch-schedule" type="text" required placeholder="Dias de Culto (Ex.: Qua e Dom)" class="px-3 py-2 text-xs rounded-lg border border-slate-300 bg-white" />
+                </div>
+                <div class="flex justify-end gap-2">
+                  <button type="button" onclick="toggleBranchForm()" class="px-3 py-1.5 text-xs font-medium text-slate-600">Cancelar</button>
+                  <button type="submit" class="px-4 py-1.5 rounded-lg bg-royal-600 text-white text-xs font-semibold">Salvar Congregação</button>
+                </div>
+              </form>
+
+              <div id="branches-list" class="divide-y divide-slate-100"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== TAB D: MISSÃO, EVANGELISMO E OBRA SOCIAL ==================== -->
+        <section id="tab-missoes" class="admin-tab-panel hidden space-y-6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <!-- Form Novo Projeto Missionário / Social -->
+            <div class="lg:col-span-4 bg-white border border-slate-200 rounded-xl p-6">
+              <h2 class="text-base font-bold text-navy-900 mb-1">Novo Projeto Missionário / Social</h2>
+              <p class="text-xs text-slate-500 mb-4">As publicações aqui aparecem automaticamente no Mural da Igreja.</p>
+              <form id="mission-form" onsubmit="handleAddMission(event)" class="space-y-3.5">
+                <div>
+                  <label for="mis-title" class="block text-xs font-semibold text-slate-700 mb-1">Título do Projeto</label>
+                  <input
+                    id="mis-title"
+                    type="text"
+                    required
+                    placeholder="Ex.: Projeto Pão da Vida — Zona Norte"
+                    class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-royal-600"
+                  />
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <label for="mis-type" class="block text-xs font-semibold text-slate-700 mb-1">Área</label>
+                    <select
+                      id="mis-type"
+                      class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-royal-600"
+                    >
+                      <option value="Obra Social">Obra Social</option>
+                      <option value="Evangelismo Urbano">Evangelismo Urbano</option>
+                      <option value="Missão Transcultural">Missão Transcultural</option>
+                      <option value="Missão Regional">Missão Regional</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="mis-status" class="block text-xs font-semibold text-slate-700 mb-1">Status</label>
+                    <select
+                      id="mis-status"
+                      class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-royal-600"
+                    >
+                      <option value="Em Andamento">Em Andamento</option>
+                      <option value="Planejado">Planejado</option>
+                      <option value="Concluído">Concluído</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <label for="mis-location" class="block text-xs font-semibold text-slate-700 mb-1">Local / Campo</label>
+                    <input
+                      id="mis-location"
+                      type="text"
+                      required
+                      placeholder="Ex.: Sertão do Piauí"
+                      class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-royal-600"
+                    />
+                  </div>
+                  <div>
+                    <label for="mis-leader" class="block text-xs font-semibold text-slate-700 mb-1">Responsável</label>
+                    <input
+                      id="mis-leader"
+                      type="text"
+                      required
+                      placeholder="Ex.: Miss. Cláudia"
+                      class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-royal-600"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label for="mis-desc" class="block text-xs font-semibold text-slate-700 mb-1">Informações & Impacto</label>
+                  <textarea
+                    id="mis-desc"
+                    rows="3"
+                    required
+                    placeholder="Descreva as ações realizadas, famílias alcançadas e necessidades..."
+                    class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-royal-600"
+                  ></textarea>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1.5">Foto do Campo / Ação</label>
+                  <div class="flex flex-wrap items-center gap-2">
+                    <label
+                      for="mis-image-file"
+                      class="cursor-pointer px-3 py-1.5 rounded-lg border border-slate-300 hover:bg-slate-50 text-xs font-semibold text-slate-700"
+                    >
+                      <i class="fa-solid fa-upload mr-1 text-royal-600"></i>Enviar Foto
+                      <input id="mis-image-file" type="file" accept="image/*" onchange="handleMissionImageSelect(event)" class="hidden" />
+                    </label>
+                    <select id="mis-preset-image" onchange="handleMissionPresetImage(this.value)" class="px-2.5 py-1.5 text-xs rounded-lg border border-slate-300 bg-white">
+                      <option value="/src/assets/images/admrcm_mission_outreach_1794967010961.jpg">Foto Ação Social</option>
+                      <option value="/src/assets/images/admrcm_social_worship_1794967011512.jpg">Foto Evangelismo</option>
+                      <option value="/src/assets/images/admrcm_water_baptism_1794967012668.jpg">Foto Batismo no Campo</option>
+                    </select>
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full py-2.5 rounded-lg bg-royal-600 hover:bg-royal-700 text-white text-sm font-semibold transition-colors"
+                >
+                  Publicar Projeto Missionário
+                </button>
+              </form>
+            </div>
+
+            <!-- Lista de Projetos Missionários -->
+            <div class="lg:col-span-8 space-y-4">
+              <div class="bg-white border border-slate-200 rounded-xl p-5 flex items-center justify-between gap-4">
+                <div>
+                  <h2 class="text-base font-bold text-navy-900">Frentes de Missão & Obra Social Cadastradas</h2>
+                  <p class="text-xs text-slate-500 mt-0.5">Gerencie fotos, locais, líderes e status dos projetos</p>
+                </div>
+                <span id="missions-count-label" class="text-xs font-mono tabular-nums font-semibold text-royal-700">0 projetos</span>
+              </div>
+              <div id="admin-missions-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-5"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-navy-950 text-slate-400 border-t border-navy-800 py-8 mt-auto">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+        <p class="text-slate-300 font-medium">
+          © 2026 Assembleia de Deus Ministério Revelando Cristo ao Mundo (ADMRCM) · Ide por todo o mundo.
+        </p>
+        <div class="flex items-center gap-6">
+          <button type="button" onclick="navigateSection('social', 'cultos-section')" class="hover:text-cyanbrand-400 transition-colors">
+            Horários de Culto
+          </button>
+          <button type="button" onclick="openPrayerModal()" class="hover:text-cyanbrand-400 transition-colors">
+            Pedido de Oração
+          </button>
+          <button type="button" onclick="handleAdminHeaderClick()" class="hover:text-cyanbrand-400 transition-colors">
+            Área Administrativa
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==================== MODAL 1: PEDIDO DE ORAÇÃO ==================== -->
+    <div
+      id="prayer-modal"
+      class="hidden fixed inset-0 z-50 bg-navy-950/75 backdrop-blur-sm flex items-center justify-center p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="prayer-modal-title"
+    >
+      <div class="bg-white rounded-xl border border-slate-200 w-full max-w-lg overflow-hidden fade-enter">
+        <div class="bg-navy-900 text-white px-6 py-4 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-hands-praying text-cyanbrand-400"></i>
+            <h2 id="prayer-modal-title" class="text-base font-bold">Enviar Pedido de Oração</h2>
+          </div>
+          <button
+            type="button"
+            onclick="closePrayerModal()"
+            class="text-slate-300 hover:text-white p-1"
+            aria-label="Fechar modal"
+          >
+            <i class="fa-solid fa-xmark text-lg"></i>
+          </button>
+        </div>
+
+        <form id="prayer-form" onsubmit="handleCreatePrayer(event)" class="p-6 space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="prayer-author" class="block text-xs font-semibold text-slate-700 mb-1.5">Seu Nome</label>
+              <input
+                id="prayer-author"
+                type="text"
+                required
+                placeholder="Ex.: Irmão Daniel Rocha"
+                class="w-full px-3.5 py-2 text-sm rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-royal-600"
+              />
+            </div>
+            <div>
+              <label for="prayer-topic" class="block text-xs font-semibold text-slate-700 mb-1.5">Motivo Principal</label>
+              <select
+                id="prayer-topic"
+                class="w-full px-3.5 py-2 text-sm rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-royal-600"
+              >
+                <option value="Saúde e Cura">Saúde e Cura</option>
+                <option value="Família e Lar">Família e Lar</option>
+                <option value="Porta de Emprego">Porta de Emprego</option>
+                <option value="Salvação de Almas">Salvação de Almas</option>
+                <option value="Gratidão">Gratidão</option>
+                <option value="Outro Motivo">Outro Motivo</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="prayer-text" class="block text-xs font-semibold text-slate-700 mb-1.5">Descreva seu Pedido</label>
+            <textarea
+              id="prayer-text"
+              rows="4"
+              required
+              placeholder="Escreva seu pedido para que a igreja e o corpo pastoral estejam intercedendo..."
+              class="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-royal-600"
+            ></textarea>
+          </div>
+
+          <label class="flex items-center gap-2.5 text-xs text-slate-700 cursor-pointer select-none">
+            <input id="prayer-private" type="checkbox" class="rounded border-slate-300 text-royal-600 focus:ring-royal-600" />
+            <span>Pedido confidencial (exibir como anônimo no mural público, reservado à intercessão pastoral)</span>
+          </label>
+
+          <div class="pt-2 flex items-center justify-end gap-3">
+            <button
+              type="button"
+              onclick="closePrayerModal()"
+              class="px-4 py-2 rounded-lg border border-slate-300 text-sm font-medium text-slate-700 hover:bg-slate-50"
+            >
+              Cancelar
+            </button>
+            <button
+              type="submit"
+              class="px-5 py-2 rounded-lg bg-royal-600 hover:bg-royal-700 text-white text-sm font-semibold transition-colors"
+            >
+              Enviar Pedido
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ==================== MODAL 2: LOGIN ADMINISTRATIVO ==================== -->
+    <div
+      id="login-modal"
+      class="hidden fixed inset-0 z-50 bg-navy-950/80 backdrop-blur-sm flex items-center justify-center p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="login-modal-title"
+    >
+      <div class="bg-white rounded-xl border border-slate-200 w-full max-w-md overflow-hidden fade-enter">
+        <div class="bg-navy-900 text-white px-6 py-5 flex items-center justify-between">
+          <div>
+            <p class="text-xs font-semibold text-cyanbrand-400">Acesso Restrito · ADMRCM</p>
+            <h2 id="login-modal-title" class="text-lg font-bold mt-0.5">Login Administrativo</h2>
+          </div>
+          <button
+            type="button"
+            onclick="closeLoginModal()"
+            class="text-slate-300 hover:text-white p-1"
+            aria-label="Fechar login"
+          >
+            <i class="fa-solid fa-xmark text-lg"></i>
+          </button>
+        </div>
+
+        <form id="login-form" onsubmit="handleAdminLogin(event)" class="p-6 space-y-4">
+          <div id="login-error" class="hidden p-3 rounded-lg bg-rose-50 border border-rose-200 text-xs font-medium text-rose-700"></div>
+
+          <div>
+            <label for="login-username" class="block text-xs font-semibold text-slate-700 mb-1.5">Usuário</label>
+            <input
+              id="login-username"
+              type="text"
+              required
+              autocomplete="username"
+              placeholder="Digite seu usuário"
+              class="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-royal-600"
+            />
+          </div>
+
+          <div>
+            <label for="login-password" class="block text-xs font-semibold text-slate-700 mb-1.5">Senha</label>
+            <div class="relative">
+              <input
+                id="login-password"
+                type="password"
+                required
+                autocomplete="current-password"
+                placeholder="Digite sua senha"
+                class="w-full px-3.5 py-2.5 pr-10 text-sm rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-royal-600"
+              />
+              <button
+                type="button"
+                onclick="togglePasswordVisibility()"
+                class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700 text-sm"
+                aria-label="Mostrar ou ocultar senha"
+              >
+                <i id="login-eye-icon" class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full py-2.5 rounded-lg bg-royal-600 hover:bg-royal-700 text-white text-sm font-semibold transition-colors"
+          >
+            Entrar no Painel
+          </button>
+
+          <!-- Quick Demo Access Helper -->
+          <div class="pt-4 border-t border-slate-200">
+            <p class="text-xs font-semibold text-slate-500 mb-2">Credenciais de Demonstração (clique para preencher):</p>
+            <div class="grid grid-cols-1 gap-1.5 text-xs">
+              <button
+                type="button"
+                onclick="fillDemoLogin('diretoria', 'admrcm2026')"
+                class="text-left px-3 py-2 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 flex items-center justify-between transition-colors"
+              >
+                <span class="font-semibold text-navy-900">Diretoria Geral (Acesso Total)</span>
+                <span class="font-mono text-slate-500">diretoria / admrcm2026</span>
+              </button>
+              <button
+                type="button"
+                onclick="fillDemoLogin('tesouraria', 'tesouro123')"
+                class="text-left px-3 py-2 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 flex items-center justify-between transition-colors"
+              >
+                <span class="font-semibold text-navy-900">Tesouraria</span>
+                <span class="font-mono text-slate-500">tesouraria / tesouro123</span>
+              </button>
+              <button
+                type="button"
+                onclick="fillDemoLogin('secretaria', 'sec123')"
+                class="text-left px-3 py-2 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 flex items-center justify-between transition-colors"
+              >
+                <span class="font-semibold text-navy-900">Secretaria</span>
+                <span class="font-mono text-slate-500">secretaria / sec123</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ==================== APPLICATION STATE & LOGIC (100% IN-MEMORY) ==================== -->
+    <script>
+      // Global Application State (In-Memory)
+      const state = {
+        currentView: 'social', // 'social' | 'admin'
+        currentAdminTab: 'tesouraria', // 'tesouraria' | 'secretaria' | 'diretoria' | 'missoes'
+        loggedUser: null,
+        feedFilter: 'Todas',
+        verseIndex: 0,
+        pendingPostImage: '',
+        pendingMissionImage: '/src/assets/images/admrcm_mission_outreach_1794967010961.jpg',
+
+        verses: [
+          {
+            text: '"E disse-lhes: Ide por todo o mundo, pregai o evangelho a toda criatura."',
+            ref: 'Marcos 16:15',
+          },
+          {
+            text: '"Portanto ide, fazei discípulos de todas as nações, batizando-os em nome do Pai, e do Filho, e do Espírito Santo."',
+            ref: 'Mateus 28:19',
+          },
+          {
+            text: '"O Senhor é o meu pastor, nada me faltará. Deitar-me faz em verdes pastos, guia-me mansamente a águas tranquilas."',
+            ref: 'Salmos 23:1-2',
+          },
+          {
+            text: '"Posso todas as coisas em Cristo que me fortalece."',
+            ref: 'Filipenses 4:13',
+          },
+          {
+            text: '"Não temas, porque eu sou contigo; não te assombres, porque eu sou teu Deus; eu te fortaleço, e te ajudo."',
+            ref: 'Isaías 41:10',
+          },
+        ],
+
+        services: [
+          { day: 'Domingo · 09h00', title: 'Escola Bíblica Dominical', place: 'Templo Sede & Filiais' },
+          { day: 'Domingo · 18h00', title: 'Culto da Família e Adoração', place: 'Templo Sede ADMRCM' },
+          { day: 'Terça-feira · 19h30', title: 'Culto de Ensino da Palavra', place: 'Templo Sede ADMRCM' },
+          { day: 'Quinta-feira · 19h30', title: 'Culto de Libertação e Oração', place: 'Todas as Congregações' },
+          { day: 'Sexta-feira · 22h00', title: 'Vigília Revelando Cristo', place: 'Templo Sede (1ª Sexta/Mês)' },
+        ],
+
+        posts: [
+          {
+            id: 1,
+            author: 'Pr. João Carlos Almeida',
+            role: 'Pastor Presidente',
+            category: 'Palavra Pastoral',
+            timestamp: 'Hoje · 08:30',
+            content:
+              'Amada igreja, iniciamos esta semana com os olhos fitos no Senhor da Seara. Nossa missão é revelar Cristo em cada lar, bairro e nação através do amor prático e da Palavra viva. Convidamos todos os irmãos para estarem presentes no Culto de Ensino desta terça-feira às 19h30.',
+            image: '/src/assets/images/admrcm_social_worship_1794967011512.jpg',
+            likes: 42,
+            liked: false,
+            commentsOpen: false,
+            comments: [
+              { author: 'Dc. Ricardo Mendes', text: 'Amém, Pastor! Estaremos reunidos em oração pelo culto.' },
+              { author: 'Irmã Patrícia Souza', text: 'Glória a Deus por mais uma semana na presença do Senhor!' },
+            ],
+          },
+          {
+            id: 2,
+            author: 'Secretaria Geral ADMRCM',
+            role: 'Comunicação Oficial',
+            category: 'Evento',
+            timestamp: 'Ontem · 17:15',
+            content:
+              'Celebramos com muita alegria o último Batismo nas Águas da nossa igreja! Novos irmãos desceram às águas testificando publicamente sua fé em Jesus Cristo. Que o Senhor continue acrescentando vidas ao Seu Reino.',
+            image: '/src/assets/images/admrcm_water_baptism_1794967012668.jpg',
+            likes: 68,
+            liked: true,
+            commentsOpen: false,
+            comments: [
+              { author: 'Pra. Helena Costa', text: 'Foi uma tarde inesquecível de muita glória e renovo espiritual!' },
+            ],
+          },
+          {
+            id: 3,
+            author: 'Irmã Mariana Oliveira',
+            role: 'Membro · Sede',
+            category: 'Testemunho',
+            timestamp: '2 dias atrás',
+            content:
+              'Quero glorificar a Deus publicamente! Semana passada pedi oração no mural pela cirurgia do meu pai. Hoje ele recebeu alta médica em perfeita recuperação. Obrigada a toda a igreja que intercedeu por nós!',
+            image: '',
+            likes: 54,
+            liked: false,
+            commentsOpen: false,
+            comments: [],
+          },
+          {
+            id: 4,
+            author: 'Departamento de Missões',
+            role: 'Obra Social & Evangelismo',
+            category: 'Missões',
+            timestamp: '3 dias atrás',
+            content:
+              'Nossa equipe esteve na Comunidade Esperança entregando 85 cestas básicas e realizando um culto ao ar livre com dezenas de crianças e famílias. Muito obrigado a cada dizimista e ofertante fiel que torna essa obra possível.',
+            image: '/src/assets/images/admrcm_mission_outreach_1794967010961.jpg',
+            likes: 61,
+            liked: false,
+            commentsOpen: false,
+            comments: [],
+          },
+        ],
+
+        prayers: [
+          {
+            id: 101,
+            author: 'Irmão Mateus Silva',
+            topic: 'Porta de Emprego',
+            text: 'Peço oração por uma entrevista de trabalho nesta quinta-feira e por provisão para minha casa.',
+            isPrivate: false,
+            timestamp: 'Hoje · 10:15',
+            prayingCount: 14,
+            prayedByMe: false,
+          },
+          {
+            id: 102,
+            author: 'Irmã Raquel Lima',
+            topic: 'Saúde e Cura',
+            text: 'Orem pela restauração completa da saúde da minha mãe e paz para toda a família.',
+            isPrivate: false,
+            timestamp: 'Ontem · 20:40',
+            prayingCount: 23,
+            prayedByMe: false,
+          },
+          {
+            id: 103,
+            author: 'Pedido Anônimo',
+            topic: 'Família e Lar',
+            text: 'Clamo pela restauração do meu casamento e sabedoria espiritual para tomar decisões.',
+            isPrivate: true,
+            timestamp: 'Ontem · 14:10',
+            prayingCount: 19,
+            prayedByMe: false,
+          },
+        ],
+
+        transactions: [
+          {
+            id: 1,
+            date: '2026-11-15',
+            description: 'Dízimos — Culto da Família (Sede)',
+            category: 'Dízimo',
+            type: 'Entrada',
+            amount: 4850.0,
+            congregation: 'Templo Sede',
+          },
+          {
+            id: 2,
+            date: '2026-11-15',
+            description: 'Oferta Missionária Dominical',
+            category: 'Oferta Missionária',
+            type: 'Entrada',
+            amount: 1620.5,
+            congregation: 'Templo Sede',
+          },
+          {
+            id: 3,
+            date: '2026-11-14',
+            description: 'Ofertas Voluntárias — Congregação Vila Nova',
+            category: 'Oferta Voluntária',
+            type: 'Entrada',
+            amount: 940.0,
+            congregation: 'Congregação Vila Nova',
+          },
+          {
+            id: 4,
+            date: '2026-11-12',
+            description: 'Conta de Energia Elétrica — Templo Sede',
+            category: 'Energia e Água',
+            type: 'Saída',
+            amount: 780.4,
+            congregation: 'Templo Sede',
+          },
+          {
+            id: 5,
+            date: '2026-11-10',
+            description: 'Compra de Cestas Básicas — Ação Social',
+            category: 'Ajuda Social / Missões',
+            type: 'Saída',
+            amount: 1450.0,
+            congregation: 'Templo Sede',
+          },
+          {
+            id: 6,
+            date: '2026-11-08',
+            description: 'Dízimo — Ev. Lucas Andrade',
+            category: 'Dízimo',
+            type: 'Entrada',
+            amount: 1200.0,
+            congregation: 'Congregação Jardim das Flores',
+          },
+          {
+            id: 7,
+            date: '2026-11-05',
+            description: 'Manutenção Sistema de Som do Altar',
+            category: 'Manutenção do Templo',
+            type: 'Saída',
+            amount: 620.0,
+            congregation: 'Templo Sede',
+          },
+        ],
+
+        members: [
+          {
+            id: 1,
+            name: 'João Carlos Almeida',
+            role: 'Pastor(a)',
+            phone: '(11) 99123-4400',
+            baptism: 'Batizado',
+            baptismDate: '2004-06-12',
+            congregation: 'Templo Sede',
+          },
+          {
+            id: 2,
+            name: 'Helena Costa Almeida',
+            role: 'Pastor(a)',
+            phone: '(11) 99123-4401',
+            baptism: 'Batizado',
+            baptismDate: '2005-03-20',
+            congregation: 'Templo Sede',
+          },
+          {
+            id: 3,
+            name: 'Ricardo Mendes Pereira',
+            role: 'Diácono',
+            phone: '(11) 98455-2109',
+            baptism: 'Batizado',
+            baptismDate: '2015-11-08',
+            congregation: 'Templo Sede',
+          },
+          {
+            id: 4,
+            name: 'Lucas Andrade Martins',
+            role: 'Evangelista',
+            phone: '(11) 97234-8812',
+            baptism: 'Batizado',
+            baptismDate: '2018-09-15',
+            congregation: 'Congregação Jardim das Flores',
+          },
+          {
+            id: 5,
+            name: 'Patrícia Souza Lima',
+            role: 'Diaconisa',
+            phone: '(11) 96331-7750',
+            baptism: 'Batizado',
+            baptismDate: '2019-12-01',
+            congregation: 'Congregação Vila Nova',
+          },
+          {
+            id: 6,
+            name: 'Gabriel Henrique Dias',
+            role: 'Membro',
+            phone: '(11) 95510-3321',
+            baptism: 'Em Preparação',
+            baptismDate: '',
+            congregation: 'Templo Sede',
+          },
+          {
+            id: 7,
+            name: 'Fernanda Alves Nogueira',
+            role: 'Cooperador(a)',
+            phone: '(11) 94889-1204',
+            baptism: 'Batizado',
+            baptismDate: '2022-04-17',
+            congregation: 'Congregação Parque das Águas',
+          },
+        ],
+
+        adminUsers: [
+          {
+            id: 1,
+            name: 'Pr. João Carlos Almeida',
+            username: 'diretoria',
+            password: 'admrcm2026',
+            role: 'Diretoria Geral',
+            protected: true,
+          },
+          {
+            id: 2,
+            name: 'Dc. Ricardo Mendes',
+            username: 'tesouraria',
+            password: 'tesouro123',
+            role: 'Tesoureiro',
+            protected: false,
+          },
+          {
+            id: 3,
+            name: 'Pra. Helena Costa',
+            username: 'secretaria',
+            password: 'sec123',
+            role: 'Secretário',
+            protected: false,
+          },
+        ],
+
+        boardMembers: [
+          { seat: 'Pastor Presidente', name: 'Pr. João Carlos Almeida', contact: '(11) 99123-4400' },
+          { seat: 'Vice-Presidente', name: 'Pr. Marcos Vinícius Rocha', contact: '(11) 98712-9040' },
+          { seat: '1ª Secretária', name: 'Pra. Helena Costa Almeida', contact: '(11) 99123-4401' },
+          { seat: '1º Tesoureiro', name: 'Dc. Ricardo Mendes Pereira', contact: '(11) 98455-2109' },
+          { seat: 'Diretora de Missões', name: 'Miss. Cláudia Regina Santos', contact: '(11) 97601-3344' },
+        ],
+
+        branches: [
+          {
+            id: 1,
+            name: 'Templo Sede ADMRCM',
+            leader: 'Pr. João Carlos Almeida',
+            address: 'Av. das Nações, 1450 — Centro',
+            schedule: 'Ter, Qui e Dom (09h e 18h)',
+          },
+          {
+            id: 2,
+            name: 'Congregação Vila Nova',
+            leader: 'Pb. Rodrigo Santana',
+            address: 'Rua das Oliveiras, 318 — Vila Nova',
+            schedule: 'Qua, Sex e Dom (18h30)',
+          },
+          {
+            id: 3,
+            name: 'Congregação Jardim das Flores',
+            leader: 'Ev. Lucas Andrade',
+            address: 'Av. Primavera, 890 — Jardim das Flores',
+            schedule: 'Qui e Dom (19h00)',
+          },
+          {
+            id: 4,
+            name: 'Congregação Parque das Águas',
+            leader: 'Dc. Robson Ferreira',
+            address: 'Rua Rio Jordão, 74 — Parque das Águas',
+            schedule: 'Ter e Dom (18h30)',
+          },
+        ],
+
+        missions: [
+          {
+            id: 1,
+            title: 'Projeto Pão da Vida & Cestas Básicas',
+            type: 'Obra Social',
+            status: 'Em Andamento',
+            location: 'Comunidade Esperança — Zona Leste',
+            leader: 'Miss. Cláudia Regina',
+            description:
+              'Distribuição mensal de 85 cestas básicas, atendimento fraterno às famílias cadastradas e evangelismo infantil aos sábados pela manhã.',
+            image: '/src/assets/images/admrcm_mission_outreach_1794967010961.jpg',
+          },
+          {
+            id: 2,
+            title: 'Missão Sertão Vivo — Evangelismo Regional',
+            type: 'Missão Regional',
+            status: 'Em Andamento',
+            location: 'Região do Vale do Jequitinhonha / MG',
+            leader: 'Ev. Lucas Andrade',
+            description:
+              'Sustento mensal de base missionária rural, distribuição de Bíblias, cultos nos povoados e discipulado de novos convertidos.',
+            image: '/src/assets/images/admrcm_water_baptism_1794967012668.jpg',
+          },
+          {
+            id: 3,
+            title: 'Impacto Evangelístico Revelando Cristo',
+            type: 'Evangelismo Urbano',
+            status: 'Planejado',
+            location: 'Praça Central & Terminais Urbanos',
+            leader: 'Ministério de Jovens e Evangelismo',
+            description:
+              'Ação mensal de louvor ao ar livre, entrega de folhetos e oração pelos transeuntes com equipe de capelania urbana.',
+            image: '/src/assets/images/admrcm_social_worship_1794967011512.jpg',
+          },
+        ],
+      };
+
+      // ==================== UTILITY HELPERS ====================
+      function escapeHTML(str) {
+        if (str === null || str === undefined) return '';
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function formatBRL(value) {
+        return Number(value || 0).toLocaleString('pt-BR', {
+          style: 'currency',
+          currency: 'BRL',
+        });
+      }
+
+      function formatDateBR(isoDate) {
+        if (!isoDate) return '—';
+        const parts = isoDate.split('-');
+        if (parts.length !== 3) return isoDate;
+        return `${parts[2]}/${parts[1]}/${parts[0]}`;
+      }
+
+      function getInitials(name) {
+        return String(name || 'AD')
+          .trim()
+          .split(/\s+/)
+          .slice(0, 2)
+          .map((w) => w[0]?.toUpperCase() || '')
+          .join('');
+      }
+
+      function handleImageFallback(imgEl, label) {
+        const parent = imgEl.parentElement;
+        if (!parent) return;
+        imgEl.style.display = 'none';
+        const fallback = document.createElement('div');
+        fallback.className =
+          'w-full h-full min-h-[160px] flex flex-col items-center justify-center bg-gradient-to-br from-navy-900 via-navy-800 to-royal-700 text-white p-6 text-center';
+        fallback.innerHTML = `<i class="fa-solid fa-globe text-3xl text-cyanbrand-400 mb-2"></i><span class="text-xs font-semibold tracking-wide">${escapeHTML(label || 'ADMRCM')}</span>`;
+        parent.appendChild(fallback);
+      }
+
+      function showToast(message, type = 'success') {
+        const container = document.getElementById('toast-container');
+        const toast = document.createElement('div');
+        const styles =
+          type === 'error'
+            ? 'bg-rose-700 text-white border-rose-800'
+            : type === 'info'
+              ? 'bg-navy-900 text-white border-navy-700'
+              : 'bg-emerald-700 text-white border-emerald-800';
+        const icon =
+          type === 'error'
+            ? 'fa-circle-exclamation'
+            : type === 'info'
+              ? 'fa-circle-info'
+              : 'fa-circle-check';
+
+        toast.className = `pointer-events-auto px-4 py-3 rounded-lg border shadow-lg text-xs font-semibold flex items-center gap-2.5 fade-enter ${styles}`;
+        toast.innerHTML = `<i class="fa-solid ${icon}"></i><span>${escapeHTML(message)}</span>`;
+        container.appendChild(toast);
+
+        setTimeout(() => {
+          toast.style.opacity = '0';
+          toast.style.transition = 'opacity 0.2s ease';
+          setTimeout(() => toast.remove(), 220);
+        }, 3200);
+      }
+
+      // ==================== NAVIGATION & VIEW SWITCHING ====================
+      function switchView(view) {
+        state.currentView = view;
+        const socialEl = document.getElementById('view-social');
+        const adminEl = document.getElementById('view-admin');
+        const headerBtnLabel = document.getElementById('header-admin-label');
+
+        if (view === 'admin') {
+          if (!state.loggedUser) {
+            openLoginModal();
+            return;
+          }
+          socialEl.classList.add('hidden');
+          adminEl.classList.remove('hidden');
+          headerBtnLabel.textContent = 'Mural da Igreja';
+          updateAdminHeaderInfo();
+          renderAllAdmin();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          adminEl.classList.add('hidden');
+          socialEl.classList.remove('hidden');
+          headerBtnLabel.textContent = state.loggedUser ? 'Acessar Painel' : 'Painel Administrativo';
+          renderAllSocial();
+        }
+      }
+
+      function navigateSection(view, sectionId) {
+        if (state.currentView !== view) {
+          switchView(view);
+        }
+        setTimeout(() => {
+          const target = document.getElementById(sectionId);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 40);
+      }
+
+      function handleAdminHeaderClick() {
+        if (state.currentView === 'admin') {
+          switchView('social');
+        } else if (state.loggedUser) {
+          switchView('admin');
+        } else {
+          openLoginModal();
+        }
+      }
+
+      function focusComposer() {
+        const input = document.getElementById('post-author');
+        if (input) {
+          input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          setTimeout(() => input.focus(), 250);
+        }
+      }
+
+      // ==================== SOCIAL AREA RENDERING & HANDLERS ====================
+      function renderChurchPulse() {
+        document.getElementById('pulse-members').textContent = state.members.length;
+        document.getElementById('pulse-branches').textContent = state.branches.length;
+        document.getElementById('pulse-prayers').textContent = state.prayers.length;
+        document.getElementById('pulse-missions').textContent = state.missions.length;
+      }
+
+      function renderVerse() {
+        const v = state.verses[state.verseIndex];
+        document.getElementById('verse-text').textContent = v.text;
+        document.getElementById('verse-ref').textContent = v.ref;
+      }
+
+      function nextVerse() {
+        state.verseIndex = (state.verseIndex + 1) % state.verses.length;
+        renderVerse();
+      }
+
+      function shareVerseToFeed() {
+        const v = state.verses[state.verseIndex];
+        state.posts.unshift({
+          id: Date.now(),
+          author: 'Devocional Diário ADMRCM',
+          role: 'Palavra do Dia',
+          category: 'Palavra Pastoral',
+          timestamp: 'Agora mesmo',
+          content: `${v.text} — ${v.ref}`,
+          image: '',
+          likes: 1,
+          liked: true,
+          commentsOpen: false,
+          comments: [],
+        });
+        renderFeed();
+        showToast('Versículo compartilhado no Mural da Igreja!');
+      }
+
+      function renderServices() {
+        const container = document.getElementById('services-schedule-list');
+        container.innerHTML = state.services
+          .map(
+            (s) => `
+          <div class="py-3 first:pt-0 last:pb-0">
+            <p class="text-xs font-semibold text-royal-700 font-mono">${escapeHTML(s.day)}</p>
+            <p class="text-sm font-semibold text-navy-900 mt-0.5">${escapeHTML(s.title)}</p>
+            <p class="text-xs text-slate-500 mt-0.5">${escapeHTML(s.place)}</p>
+          </div>`
+          )
+          .join('');
+      }
+
+      function renderPrayers() {
+        const container = document.getElementById('prayer-wall-list');
+        if (!state.prayers.length) {
+          container.innerHTML = `<p class="text-xs text-slate-500 py-4 text-center">Nenhum pedido registrado ainda.</p>`;
+          return;
+        }
+        container.innerHTML = state.prayers
+          .map(
+            (p) => `
+          <div class="p-3.5 rounded-lg bg-slate-50 border border-slate-200/80">
+            <div class="flex items-center justify-between gap-2 text-xs text-slate-500">
+              <span class="font-semibold text-navy-900">${escapeHTML(p.isPrivate ? 'Pedido Confidencial' : p.author)}</span>
+              <span>${escapeHTML(p.topic)}</span>
+            </div>
+            <p class="text-xs text-slate-700 leading-relaxed mt-1.5">
+              ${p.isPrivate && !state.loggedUser ? 'Pedido reservado à intercessão da liderança e pastores da ADMRCM.' : escapeHTML(p.text)}
+            </p>
+            <div class="mt-2.5 flex items-center justify-between gap-2">
+              <span class="text-[11px] text-slate-400">${escapeHTML(p.timestamp)}</span>
+              <button
+                type="button"
+                onclick="togglePraying(${p.id})"
+                class="text-xs font-semibold flex items-center gap-1.5 transition-colors ${
+                  p.prayedByMe ? 'text-royal-700' : 'text-slate-600 hover:text-royal-600'
+                }"
+              >
+                <i class="fa-solid fa-hands-praying"></i>
+                <span>${p.prayedByMe ? 'Orando' : 'Estou Orando'} (<span class="tabular-nums">${p.prayingCount}</span>)</span>
+              </button>
+            </div>
+          </div>`
+          )
+          .join('');
+      }
+
+      function togglePraying(id) {
+        const item = state.prayers.find((p) => p.id === id);
+        if (!item) return;
+        item.prayedByMe = !item.prayedByMe;
+        item.prayingCount += item.prayedByMe ? 1 : -1;
+        renderPrayers();
+      }
+
+      function setFeedFilter(category) {
+        state.feedFilter = category;
+        document.querySelectorAll('.feed-filter-btn').forEach((btn) => {
+          const isActive = btn.dataset.feedFilter === category;
+          btn.className = `feed-filter-btn px-3 py-1.5 text-xs font-semibold rounded-md transition-colors whitespace-nowrap shrink-0 ${
+            isActive ? 'bg-white text-navy-900 shadow-sm' : 'text-slate-600 hover:text-navy-900'
+          }`;
+        });
+        renderFeed();
+      }
+
+      function renderFeed() {
+        const container = document.getElementById('feed-list');
+        const query = (document.getElementById('feed-search')?.value || '').trim().toLowerCase();
+
+        const filtered = state.posts.filter((post) => {
+          const matchesCategory = state.feedFilter === 'Todas' || post.category === state.feedFilter;
+          const matchesQuery =
+            !query ||
+            post.author.toLowerCase().includes(query) ||
+            post.content.toLowerCase().includes(query) ||
+            post.category.toLowerCase().includes(query);
+          return matchesCategory && matchesQuery;
+        });
+
+        if (!filtered.length) {
+          container.innerHTML = `
+            <div class="bg-white border border-slate-200 rounded-xl p-10 text-center">
+              <i class="fa-regular fa-newspaper text-3xl text-slate-300 mb-3"></i>
+              <p class="text-sm font-semibold text-navy-900">Nenhuma publicação encontrada</p>
+              <p class="text-xs text-slate-500 mt-1">Tente limpar os filtros ou seja o primeiro a compartilhar nesta categoria.</p>
+            </div>`;
+          return;
+        }
+
+        container.innerHTML = filtered
+          .map(
+            (post) => `
+          <article class="bg-white border border-slate-200 rounded-xl overflow-hidden">
+            <div class="p-5 sm:p-6">
+              <!-- Author Metadata Header (Zero-Pill Clean Typography) -->
+              <div class="flex items-start justify-between gap-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-navy-900 text-cyanbrand-400 font-bold text-xs flex items-center justify-center shrink-0">
+                    ${escapeHTML(getInitials(post.author))}
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-bold text-navy-900">${escapeHTML(post.author)}</h3>
+                    <div class="flex flex-wrap items-center gap-1.5 text-xs text-slate-500 mt-0.5">
+                      <span class="font-medium text-royal-700">${escapeHTML(post.category)}</span>
+                      <span aria-hidden="true">·</span>
+                      <span>${escapeHTML(post.role)}</span>
+                      <span aria-hidden="true">·</span>
+                      <span>${escapeHTML(post.timestamp)}</span>
+                    </div>
+                  </div>
+                </div>
+                ${
+                  state.loggedUser
+                    ? `<button type="button" onclick="deletePost(${post.id})" title="Remover publicação" class="text-xs text-slate-400 hover:text-rose-600 p-1">
+                        <i class="fa-regular fa-trash-can"></i>
+                      </button>`
+                    : ''
+                }
+              </div>
+
+              <!-- Post Body -->
+              <p class="mt-4 text-sm sm:text-[15px] text-slate-700 leading-relaxed whitespace-pre-line">${escapeHTML(post.content)}</p>
+            </div>
+
+            ${
+              post.image
+                ? `<div class="border-t border-b border-slate-100 bg-slate-100 max-h-96 overflow-hidden">
+                    <img
+                      src="${escapeHTML(post.image)}"
+                      alt="Imagem publicada por ${escapeHTML(post.author)}"
+                      referrerpolicy="no-referrer"
+                      onerror="handleImageFallback(this, '${escapeHTML(post.category)}')"
+                      class="w-full max-h-96 object-cover"
+                    />
+                  </div>`
+                : ''
+            }
+
+            <!-- Actions Bar -->
+            <div class="px-5 sm:px-6 py-3 flex items-center justify-between border-t border-slate-100 bg-slate-50/50 text-xs font-semibold">
+              <div class="flex items-center gap-6">
+                <button
+                  type="button"
+                  onclick="toggleLikePost(${post.id})"
+                  class="flex items-center gap-2 transition-colors py-1 ${
+                    post.liked ? 'text-royal-700' : 'text-slate-600 hover:text-royal-600'
+                  }"
+                >
+                  <i class="${post.liked ? 'fa-solid' : 'fa-regular'} fa-heart"></i>
+                  <span>Amém / Curtir (<span class="tabular-nums">${post.likes}</span>)</span>
+                </button>
+                <button
+                  type="button"
+                  onclick="toggleComments(${post.id})"
+                  class="flex items-center gap-2 text-slate-600 hover:text-navy-900 transition-colors py-1"
+                >
+                  <i class="fa-regular fa-comment"></i>
+                  <span>Comentar (<span class="tabular-nums">${post.comments.length}</span>)</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Comments Drawer -->
+            ${
+              post.commentsOpen
+                ? `<div class="px-5 sm:px-6 py-4 bg-slate-50 border-t border-slate-200 space-y-3">
+                    ${
+                      post.comments.length
+                        ? post.comments
+                            .map(
+                              (c) => `
+                          <div class="text-xs bg-white border border-slate-200 rounded-lg px-3.5 py-2.5">
+                            <span class="font-bold text-navy-900">${escapeHTML(c.author)}:</span>
+                            <span class="text-slate-700 ml-1">${escapeHTML(c.text)}</span>
+                          </div>`
+                            )
+                            .join('')
+                        : `<p class="text-xs text-slate-500">Seja o primeiro a deixar uma palavra de bênção.</p>`
+                    }
+                    <form onsubmit="handleAddComment(event, ${post.id})" class="flex flex-col sm:flex-row gap-2 pt-1">
+                      <input
+                        type="text"
+                        name="commentAuthor"
+                        required
+                        placeholder="Seu nome"
+                        class="sm:w-40 px-3 py-1.5 text-xs rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-royal-600"
+                      />
+                      <input
+                        type="text"
+                        name="commentText"
+                        required
+                        placeholder="Escreva um comentário..."
+                        class="flex-1 px-3 py-1.5 text-xs rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-royal-600"
+                      />
+                      <button
+                        type="submit"
+                        class="px-4 py-1.5 rounded-lg bg-royal-600 hover:bg-royal-700 text-white text-xs font-semibold whitespace-nowrap shrink-0"
+                      >
+                        Enviar
+                      </button>
+                    </form>
+                  </div>`
+                : ''
+            }
+          </article>`
+          )
+          .join('');
+      }
+
+      function handlePostImageSelect(event) {
+        const file = event.target.files?.[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          state.pendingPostImage = e.target.result;
+          showPostImagePreview(state.pendingPostImage, file.name);
+        };
+        reader.readAsDataURL(file);
+      }
+
+      function handlePostPresetImage(url) {
+        if (!url) {
+          clearPostImage();
+          return;
+        }
+        state.pendingPostImage = url;
+        showPostImagePreview(url, 'Foto da galeria selecionada');
+      }
+
+      function showPostImagePreview(src, label) {
+        const wrap = document.getElementById('post-image-preview-wrap');
+        const img = document.getElementById('post-image-preview');
+        const status = document.getElementById('post-image-status');
+        img.src = src;
+        wrap.classList.remove('hidden');
+        status.textContent = label;
+        status.classList.remove('hidden');
+      }
+
+      function clearPostImage() {
+        state.pendingPostImage = '';
+        document.getElementById('post-image-file').value = '';
+        document.getElementById('post-preset-image').value = '';
+        document.getElementById('post-image-preview-wrap').classList.add('hidden');
+        document.getElementById('post-image-status').classList.add('hidden');
+      }
+
+      function handleCreatePost(event) {
+        event.preventDefault();
+        const author = document.getElementById('post-author').value.trim();
+        const category = document.getElementById('post-category').value;
+        const content = document.getElementById('post-content').value.trim();
+        if (!author || !content) return;
+
+        state.posts.unshift({
+          id: Date.now(),
+          author,
+          role: 'Membro / Visitante',
+          category,
+          timestamp: 'Agora mesmo',
+          content,
+          image: state.pendingPostImage || '',
+          likes: 0,
+          liked: false,
+          commentsOpen: false,
+          comments: [],
+        });
+
+        document.getElementById('post-form').reset();
+        clearPostImage();
+        setFeedFilter('Todas');
+        showToast('Publicação adicionada ao Mural da Igreja!');
+      }
+
+      function toggleLikePost(id) {
+        const post = state.posts.find((p) => p.id === id);
+        if (!post) return;
+        post.liked = !post.liked;
+        post.likes += post.liked ? 1 : -1;
+        renderFeed();
+      }
+
+      function toggleComments(id) {
+        const post = state.posts.find((p) => p.id === id);
+        if (!post) return;
+        post.commentsOpen = !post.commentsOpen;
+        renderFeed();
+      }
+
+      function handleAddComment(event, postId) {
+        event.preventDefault();
+        const form = event.target;
+        const author = form.commentAuthor.value.trim();
+        const text = form.commentText.value.trim();
+        if (!author || !text) return;
+        const post = state.posts.find((p) => p.id === postId);
+        if (!post) return;
+        post.comments.push({ author, text });
+        post.commentsOpen = true;
+        renderFeed();
+      }
+
+      function deletePost(id) {
+        state.posts = state.posts.filter((p) => p.id !== id);
+        renderFeed();
+        showToast('Publicação removida do mural.', 'info');
+      }
+
+      function renderPublicMissions() {
+        const grid = document.getElementById('public-missions-grid');
+        grid.innerHTML = state.missions
+          .map(
+            (m) => `
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col">
+            <div class="h-44 bg-slate-100 overflow-hidden">
+              <img
+                src="${escapeHTML(m.image)}"
+                alt="${escapeHTML(m.title)}"
+                referrerpolicy="no-referrer"
+                onerror="handleImageFallback(this, '${escapeHTML(m.title)}')"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-5 flex-1 flex flex-col">
+              <div class="flex items-center gap-2 text-xs text-slate-500">
+                <span class="font-semibold text-royal-700">${escapeHTML(m.type)}</span>
+                <span aria-hidden="true">·</span>
+                <span>${escapeHTML(m.status)}</span>
+              </div>
+              <h3 class="mt-1.5 text-base font-bold text-navy-900">${escapeHTML(m.title)}</h3>
+              <p class="mt-2 text-xs text-slate-600 leading-relaxed flex-1">${escapeHTML(m.description)}</p>
+              <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                <span><i class="fa-solid fa-location-dot text-cyanbrand-600 mr-1"></i>${escapeHTML(m.location)}</span>
+                <span class="font-medium text-navy-900">${escapeHTML(m.leader)}</span>
+              </div>
+            </div>
+          </div>`
+          )
+          .join('');
+      }
+
+      function renderAllSocial() {
+        renderChurchPulse();
+        renderVerse();
+        renderServices();
+        renderPrayers();
+        renderFeed();
+        renderPublicMissions();
+      }
+
+      // ==================== PRAYER MODAL ====================
+      function openPrayerModal() {
+        document.getElementById('prayer-modal').classList.remove('hidden');
+      }
+
+      function closePrayerModal() {
+        document.getElementById('prayer-modal').classList.add('hidden');
+      }
+
+      function handleCreatePrayer(event) {
+        event.preventDefault();
+        const author = document.getElementById('prayer-author').value.trim();
+        const topic = document.getElementById('prayer-topic').value;
+        const text = document.getElementById('prayer-text').value.trim();
+        const isPrivate = document.getElementById('prayer-private').checked;
+        if (!author || !text) return;
+
+        state.prayers.unshift({
+          id: Date.now(),
+          author,
+          topic,
+          text,
+          isPrivate,
+          timestamp: 'Agora mesmo',
+          prayingCount: 1,
+          prayedByMe: true,
+        });
+
+        document.getElementById('prayer-form').reset();
+        closePrayerModal();
+        renderPrayers();
+        renderChurchPulse();
+        showToast('Seu pedido foi enviado para a Corrente de Oração!');
+      }
+
+      // ==================== AUTHENTICATION & LOGIN MODAL ====================
+      function openLoginModal() {
+        document.getElementById('login-error').classList.add('hidden');
+        document.getElementById('login-modal').classList.remove('hidden');
+        setTimeout(() => document.getElementById('login-username').focus(), 100);
+      }
+
+      function closeLoginModal() {
+        document.getElementById('login-modal').classList.add('hidden');
+      }
+
+      function togglePasswordVisibility() {
+        const input = document.getElementById('login-password');
+        const icon = document.getElementById('login-eye-icon');
+        if (input.type === 'password') {
+          input.type = 'text';
+          icon.className = 'fa-regular fa-eye-slash';
+        } else {
+          input.type = 'password';
+          icon.className = 'fa-regular fa-eye';
+        }
+      }
+
+      function fillDemoLogin(user, pass) {
+        document.getElementById('login-username').value = user;
+        document.getElementById('login-password').value = pass;
+      }
+
+      function handleAdminLogin(event) {
+        event.preventDefault();
+        const username = document.getElementById('login-username').value.trim();
+        const password = document.getElementById('login-password').value;
+        const errorBox = document.getElementById('login-error');
+
+        const found = state.adminUsers.find(
+          (u) => u.username.toLowerCase() === username.toLowerCase() && u.password === password
+        );
+
+        if (!found) {
+          errorBox.textContent = 'Usuário ou senha inválidos. Verifique suas credenciais e tente novamente.';
+          errorBox.classList.remove('hidden');
+          return;
+        }
+
+        state.loggedUser = found;
+        errorBox.classList.add('hidden');
+        document.getElementById('login-form').reset();
+        closeLoginModal();
+
+        // Route user to most relevant tab by role
+        if (found.role === 'Secretário') state.currentAdminTab = 'secretaria';
+        else if (found.role === 'Líder de Missões') state.currentAdminTab = 'missoes';
+        else state.currentAdminTab = 'tesouraria';
+
+        switchView('admin');
+        switchAdminTab(state.currentAdminTab);
+        showToast(`Bem-vindo(a), ${found.name}!`);
+      }
+
+      function logoutAdmin() {
+        state.loggedUser = null;
+        switchView('social');
+        showToast('Sessão administrativa encerrada.', 'info');
+      }
+
+      function updateAdminHeaderInfo() {
+        if (!state.loggedUser) return;
+        document.getElementById('admin-user-name').textContent = state.loggedUser.name;
+        document.getElementById('admin-user-role').textContent = state.loggedUser.role;
+      }
+
+      function switchAdminTab(tabName) {
+        state.currentAdminTab = tabName;
+        document.querySelectorAll('.admin-tab-panel').forEach((panel) => {
+          panel.classList.add('hidden');
+        });
+        document.getElementById(`tab-${tabName}`).classList.remove('hidden');
+
+        document.querySelectorAll('.admin-tab-btn').forEach((btn) => {
+          const active = btn.dataset.adminTab === tabName;
+          btn.className = `admin-tab-btn px-4 py-3 text-sm font-semibold border-b-2 whitespace-nowrap shrink-0 flex items-center gap-2 transition-colors ${
+            active ? 'border-cyanbrand-400 text-white' : 'border-transparent text-slate-400 hover:text-white'
+          }`;
+        });
+
+        renderAllAdmin();
+      }
+
+      // ==================== ADMIN TAB A: TESOURARIA ====================
+      const TX_CATEGORIES = {
+        Entrada: ['Dízimo', 'Oferta Missionária', 'Oferta Voluntária', 'Oferta de Campanha', 'Outros'],
+        Saída: [
+          'Energia e Água',
+          'Manutenção do Templo',
+          'Ajuda Social / Missões',
+          'Prebenda Pastoral',
+          'Material de Limpeza e Secretaria',
+          'Outros',
+        ],
+      };
+
+      function updateTxCategoryOptions() {
+        const type = document.getElementById('tx-type').value;
+        const catSelect = document.getElementById('tx-category');
+        catSelect.innerHTML = TX_CATEGORIES[type]
+          .map((c) => `<option value="${escapeHTML(c)}">${escapeHTML(c)}</option>`)
+          .join('');
+      }
+
+      function syncCongregationDropdowns() {
+        const options = state.branches
+          .map((b) => `<option value="${escapeHTML(b.name)}">${escapeHTML(b.name)}</option>`)
+          .join('');
+        document.querySelectorAll('.tx-congregation-select').forEach((sel) => {
+          const prev = sel.value;
+          sel.innerHTML = options;
+          if (prev) sel.value = prev;
+        });
+      }
+
+      function renderTreasury() {
+        const totalIn = state.transactions
+          .filter((t) => t.type === 'Entrada')
+          .reduce((acc, t) => acc + t.amount, 0);
+        const totalOut = state.transactions
+          .filter((t) => t.type === 'Saída')
+          .reduce((acc, t) => acc + t.amount, 0);
+        const totalTithes = state.transactions
+          .filter((t) => t.type === 'Entrada' && t.category === 'Dízimo')
+          .reduce((acc, t) => acc + t.amount, 0);
+        const balance = totalIn - totalOut;
+
+        const saldoEl = document.getElementById('kpi-saldo');
+        saldoEl.textContent = formatBRL(balance);
+        saldoEl.className = `mt-2 text-2xl font-bold font-mono tabular-nums ${
+          balance >= 0 ? 'text-navy-900' : 'text-rose-700'
+        }`;
+        document.getElementById('kpi-entradas').textContent = formatBRL(totalIn);
+        document.getElementById('kpi-saidas').textContent = formatBRL(totalOut);
+        document.getElementById('kpi-dizimos').textContent = formatBRL(totalTithes);
+
+        const filterType = document.getElementById('tx-filter-type').value;
+        const query = (document.getElementById('tx-search').value || '').trim().toLowerCase();
+
+        const filtered = state.transactions.filter((t) => {
+          const matchType = filterType === 'Todos' || t.type === filterType;
+          const matchQuery =
+            !query ||
+            t.description.toLowerCase().includes(query) ||
+            t.category.toLowerCase().includes(query) ||
+            t.congregation.toLowerCase().includes(query);
+          return matchType && matchQuery;
+        });
+
+        const tbody = document.getElementById('treasury-table-body');
+        if (!filtered.length) {
+          tbody.innerHTML = `<tr><td colspan="6" class="py-8 text-center text-xs text-slate-500">Nenhum lançamento encontrado para este filtro.</td></tr>`;
+          return;
+        }
+
+        tbody.innerHTML = filtered
+          .map(
+            (t) => `
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="py-3 px-4 font-mono text-xs text-slate-600 tabular-nums whitespace-nowrap">${formatDateBR(t.date)}</td>
+            <td class="py-3 px-4">
+              <p class="font-semibold text-navy-900 text-xs sm:text-sm">${escapeHTML(t.description)}</p>
+              <p class="text-xs text-slate-500">${escapeHTML(t.congregation)}</p>
+            </td>
+            <td class="py-3 px-4 text-xs text-slate-700">${escapeHTML(t.category)}</td>
+            <td class="py-3 px-4 text-xs font-semibold ${t.type === 'Entrada' ? 'text-emerald-700' : 'text-rose-700'}">
+              <i class="fa-solid ${t.type === 'Entrada' ? 'fa-arrow-up' : 'fa-arrow-down'} mr-1"></i>${escapeHTML(t.type)}
+            </td>
+            <td class="py-3 px-4 text-right font-mono text-xs sm:text-sm font-semibold tabular-nums whitespace-nowrap ${
+              t.type === 'Entrada' ? 'text-emerald-700' : 'text-rose-700'
+            }">
+              ${t.type === 'Entrada' ? '+' : '-'} ${formatBRL(t.amount)}
+            </td>
+            <td class="py-3 px-4 text-right">
+              <button type="button" onclick="deleteTransaction(${t.id})" title="Excluir lançamento" class="text-slate-400 hover:text-rose-600 p-1">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </td>
+          </tr>`
+          )
+          .join('');
+      }
+
+      function handleAddTransaction(event) {
+        event.preventDefault();
+        const type = document.getElementById('tx-type').value;
+        const category = document.getElementById('tx-category').value;
+        const description = document.getElementById('tx-desc').value.trim();
+        const amount = parseFloat(document.getElementById('tx-amount').value);
+        const date = document.getElementById('tx-date').value;
+        const congregation = document.getElementById('tx-congregation').value;
+
+        if (!description || isNaN(amount) || amount <= 0 || !date) return;
+
+        state.transactions.unshift({
+          id: Date.now(),
+          date,
+          description,
+          category,
+          type,
+          amount,
+          congregation,
+        });
+
+        document.getElementById('treasury-form').reset();
+        document.getElementById('tx-date').valueAsDate = new Date();
+        updateTxCategoryOptions();
+        renderTreasury();
+        showToast(`${type} de ${formatBRL(amount)} registrada com sucesso!`);
+      }
+
+      function deleteTransaction(id) {
+        state.transactions = state.transactions.filter((t) => t.id !== id);
+        renderTreasury();
+        showToast('Lançamento removido do livro caixa.', 'info');
+      }
+
+      function exportTreasuryCSV() {
+        const headers = ['Data', 'Tipo', 'Categoria', 'Descricao', 'Congregacao', 'Valor'];
+        const rows = state.transactions.map((t) => [
+          t.date,
+          t.type,
+          `"${t.category}"`,
+          `"${t.description.replace(/"/g, '""')}"`,
+          `"${t.congregation}"`,
+          t.amount.toFixed(2),
+        ]);
+        const csv = [headers.join(','), ...rows.map((r) => r.join(','))].join('\n');
+        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'tesouraria_admrcm.csv';
+        link.click();
+        URL.revokeObjectURL(url);
+        showToast('Relatório CSV exportado!');
+      }
+
+      // ==================== ADMIN TAB B: SECRETARIA ====================
+      function renderSecretaria() {
+        const total = state.members.length;
+        const obreiros = state.members.filter((m) => m.role !== 'Membro').length;
+        const batizados = state.members.filter((m) => m.baptism === 'Batizado').length;
+        const preparacao = state.members.filter((m) => m.baptism === 'Em Preparação').length;
+
+        document.getElementById('sec-kpi-total').textContent = total;
+        document.getElementById('sec-kpi-obreiros').textContent = obreiros;
+        document.getElementById('sec-kpi-batizados').textContent = batizados;
+        document.getElementById('sec-kpi-preparacao').textContent = preparacao;
+
+        const filterBaptism = document.getElementById('sec-filter-baptism').value;
+        const query = (document.getElementById('sec-search').value || '').trim().toLowerCase();
+
+        const filtered = state.members.filter((m) => {
+          const matchBaptism = filterBaptism === 'Todos' || m.baptism === filterBaptism;
+          const matchQuery =
+            !query ||
+            m.name.toLowerCase().includes(query) ||
+            m.role.toLowerCase().includes(query) ||
+            m.phone.toLowerCase().includes(query) ||
+            m.congregation.toLowerCase().includes(query);
+          return matchBaptism && matchQuery;
+        });
+
+        const tbody = document.getElementById('secretaria-table-body');
+        if (!filtered.length) {
+          tbody.innerHTML = `<tr><td colspan="6" class="py-8 text-center text-xs text-slate-500">Nenhum membro encontrado.</td></tr>`;
+          return;
+        }
+
+        tbody.innerHTML = filtered
+          .map((m) => {
+            const baptismColor =
+              m.baptism === 'Batizado'
+                ? 'text-cyanbrand-600'
+                : m.baptism === 'Em Preparação'
+                  ? 'text-amber-600'
+                  : 'text-slate-500';
+            return `
+            <tr class="hover:bg-slate-50/80 transition-colors">
+              <td class="py-3 px-4 font-semibold text-navy-900">${escapeHTML(m.name)}</td>
+              <td class="py-3 px-4 text-xs font-medium text-royal-700">${escapeHTML(m.role)}</td>
+              <td class="py-3 px-4 font-mono text-xs text-slate-600 tabular-nums whitespace-nowrap">${escapeHTML(m.phone)}</td>
+              <td class="py-3 px-4 text-xs">
+                <button
+                  type="button"
+                  onclick="cycleBaptismStatus(${m.id})"
+                  title="Clique para atualizar status batismal"
+                  class="font-semibold ${baptismColor} hover:underline text-left"
+                >
+                  <i class="fa-solid fa-droplet mr-1"></i>${escapeHTML(m.baptism)}
+                  ${m.baptismDate ? `<span class="font-mono text-slate-400 ml-1">(${formatDateBR(m.baptismDate)})</span>` : ''}
+                </button>
+              </td>
+              <td class="py-3 px-4 text-xs text-slate-600">${escapeHTML(m.congregation)}</td>
+              <td class="py-3 px-4 text-right">
+                <button type="button" onclick="deleteMember(${m.id})" title="Remover do rol" class="text-slate-400 hover:text-rose-600 p-1">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+              </td>
+            </tr>`;
+          })
+          .join('');
+      }
+
+      function handleAddMember(event) {
+        event.preventDefault();
+        const name = document.getElementById('mem-name').value.trim();
+        const role = document.getElementById('mem-role').value;
+        const phone = document.getElementById('mem-phone').value.trim();
+        const baptism = document.getElementById('mem-baptism').value;
+        const baptismDate = document.getElementById('mem-baptism-date').value;
+        const congregation = document.getElementById('mem-congregation').value;
+        if (!name || !phone) return;
+
+        state.members.unshift({
+          id: Date.now(),
+          name,
+          role,
+          phone,
+          baptism,
+          baptismDate,
+          congregation,
+        });
+
+        document.getElementById('member-form').reset();
+        renderSecretaria();
+        renderChurchPulse();
+        showToast(`${name} cadastrado(a) no rol da secretaria!`);
+      }
+
+      function cycleBaptismStatus(id) {
+        const m = state.members.find((item) => item.id === id);
+        if (!m) return;
+        const order = ['Em Preparação', 'Batizado', 'Não Batizado'];
+        const nextIdx = (order.indexOf(m.baptism) + 1) % order.length;
+        m.baptism = order[nextIdx];
+        if (m.baptism === 'Batizado' && !m.baptismDate) {
+          m.baptismDate = new Date().toISOString().split('T')[0];
+        }
+        renderSecretaria();
+        showToast(`Status batismal de ${m.name} atualizado para "${m.baptism}".`);
+      }
+
+      function deleteMember(id) {
+        state.members = state.members.filter((m) => m.id !== id);
+        renderSecretaria();
+        renderChurchPulse();
+        showToast('Registro removido do rol de membros.', 'info');
+      }
+
+      // ==================== ADMIN TAB C: DIRETORIA GERAL & ACESSOS ====================
+      function renderDiretoria() {
+        const isDirector = state.loggedUser?.role === 'Diretoria Geral';
+        const lockNotice = document.getElementById('diretoria-lock-notice');
+        const accessBox = document.getElementById('access-management-box');
+
+        if (isDirector) {
+          lockNotice.classList.add('hidden');
+          accessBox.classList.remove('hidden');
+        } else {
+          lockNotice.classList.remove('hidden');
+          accessBox.classList.add('hidden');
+        }
+
+        // Users table
+        const usersTbody = document.getElementById('admin-users-table-body');
+        usersTbody.innerHTML = state.adminUsers
+          .map(
+            (u) => `
+          <tr class="hover:bg-slate-50/80">
+            <td class="py-3 px-4 font-semibold text-navy-900">${escapeHTML(u.name)}</td>
+            <td class="py-3 px-4 font-mono text-xs text-slate-700">${escapeHTML(u.username)}</td>
+            <td class="py-3 px-4 font-mono text-xs text-slate-500">${escapeHTML(u.password)}</td>
+            <td class="py-3 px-4 text-xs font-semibold text-royal-700">${escapeHTML(u.role)}</td>
+            <td class="py-3 px-4 text-right">
+              ${
+                u.protected
+                  ? `<span class="text-xs text-slate-400">Principal</span>`
+                  : `<button type="button" onclick="deleteAdminUser(${u.id})" title="Revogar acesso" class="text-slate-400 hover:text-rose-600 p-1">
+                      <i class="fa-regular fa-trash-can"></i>
+                    </button>`
+              }
+            </td>
+          </tr>`
+          )
+          .join('');
+
+        // Mesa Diretora
+        const mesaEl = document.getElementById('mesa-diretora-list');
+        mesaEl.innerHTML = state.boardMembers
+          .map(
+            (b) => `
+          <div class="py-3 first:pt-0 last:pb-0 flex items-center justify-between gap-3">
+            <div>
+              <p class="text-xs font-semibold text-royal-700">${escapeHTML(b.seat)}</p>
+              <p class="text-sm font-bold text-navy-900">${escapeHTML(b.name)}</p>
+            </div>
+            <span class="text-xs font-mono text-slate-500 tabular-nums">${escapeHTML(b.contact)}</span>
+          </div>`
+          )
+          .join('');
+
+        // Branches
+        const branchesEl = document.getElementById('branches-list');
+        branchesEl.innerHTML = state.branches
+          .map(
+            (br) => `
+          <div class="py-3.5 first:pt-0 last:pb-0 flex items-start justify-between gap-4">
+            <div>
+              <h3 class="text-sm font-bold text-navy-900">${escapeHTML(br.name)}</h3>
+              <p class="text-xs text-slate-600 mt-0.5">${escapeHTML(br.address)}</p>
+              <div class="flex flex-wrap items-center gap-2 text-xs text-slate-500 mt-1">
+                <span>Dirigente: <strong class="text-slate-700">${escapeHTML(br.leader)}</strong></span>
+                <span aria-hidden="true">·</span>
+                <span>${escapeHTML(br.schedule)}</span>
+              </div>
+            </div>
+            ${
+              br.id !== 1
+                ? `<button type="button" onclick="deleteBranch(${br.id})" title="Remover congregação" class="text-slate-400 hover:text-rose-600 p-1 text-xs">
+                    <i class="fa-regular fa-trash-can"></i>
+                  </button>`
+                : `<span class="text-xs font-semibold text-cyanbrand-600">Matriz</span>`
+            }
+          </div>`
+          )
+          .join('');
+      }
+
+      function handleCreateAdminUser(event) {
+        event.preventDefault();
+        if (state.loggedUser?.role !== 'Diretoria Geral') {
+          showToast('Apenas a Diretoria Geral pode criar usuários.', 'error');
+          return;
+        }
+        const name = document.getElementById('acc-name').value.trim();
+        const username = document.getElementById('acc-username').value.trim();
+        const password = document.getElementById('acc-password').value;
+        const role = document.getElementById('acc-role').value;
+
+        if (state.adminUsers.some((u) => u.username.toLowerCase() === username.toLowerCase())) {
+          showToast('Este nome de usuário já está em uso.', 'error');
+          return;
+        }
+
+        state.adminUsers.push({
+          id: Date.now(),
+          name,
+          username,
+          password,
+          role,
+          protected: false,
+        });
+
+        document.getElementById('user-access-form').reset();
+        renderDiretoria();
+        showToast(`Acesso criado para ${name} (${username})!`);
+      }
+
+      function deleteAdminUser(id) {
+        if (state.loggedUser?.role !== 'Diretoria Geral') return;
+        const target = state.adminUsers.find((u) => u.id === id);
+        if (!target || target.protected) return;
+        if (state.loggedUser.id === id) {
+          showToast('Você não pode excluir o próprio usuário logado.', 'error');
+          return;
+        }
+        state.adminUsers = state.adminUsers.filter((u) => u.id !== id);
+        renderDiretoria();
+        showToast('Credencial de acesso excluída.', 'info');
+      }
+
+      function toggleBranchForm() {
+        document.getElementById('branch-form').classList.toggle('hidden');
+      }
+
+      function handleAddBranch(event) {
+        event.preventDefault();
+        const name = document.getElementById('branch-name').value.trim();
+        const leader = document.getElementById('branch-leader').value.trim();
+        const address = document.getElementById('branch-address').value.trim();
+        const schedule = document.getElementById('branch-schedule').value.trim();
+        if (!name || !leader) return;
+
+        state.branches.push({
+          id: Date.now(),
+          name,
+          leader,
+          address,
+          schedule,
+        });
+
+        document.getElementById('branch-form').reset();
+        toggleBranchForm();
+        syncCongregationDropdowns();
+        renderDiretoria();
+        renderChurchPulse();
+        showToast(`Congregação "${name}" adicionada!`);
+      }
+
+      function deleteBranch(id) {
+        state.branches = state.branches.filter((b) => b.id !== id);
+        syncCongregationDropdowns();
+        renderDiretoria();
+        renderChurchPulse();
+        showToast('Congregação removida.', 'info');
+      }
+
+      // ==================== ADMIN TAB D: MISSÕES & OBRA SOCIAL ====================
+      function handleMissionImageSelect(event) {
+        const file = event.target.files?.[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          state.pendingMissionImage = e.target.result;
+          showToast(`Foto "${file.name}" carregada para o projeto!`);
+        };
+        reader.readAsDataURL(file);
+      }
+
+      function handleMissionPresetImage(url) {
+        state.pendingMissionImage = url;
+      }
+
+      function renderAdminMissions() {
+        document.getElementById('missions-count-label').textContent = `${state.missions.length} projetos`;
+        const grid = document.getElementById('admin-missions-grid');
+
+        if (!state.missions.length) {
+          grid.innerHTML = `<div class="col-span-2 bg-white border border-slate-200 rounded-xl p-8 text-center text-xs text-slate-500">Nenhum projeto missionário cadastrado.</div>`;
+          return;
+        }
+
+        grid.innerHTML = state.missions
+          .map(
+            (m) => `
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col">
+            <div class="h-40 bg-slate-100 overflow-hidden">
+              <img
+                src="${escapeHTML(m.image)}"
+                alt="${escapeHTML(m.title)}"
+                referrerpolicy="no-referrer"
+                onerror="handleImageFallback(this, '${escapeHTML(m.title)}')"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-4 flex-1 flex flex-col">
+              <div class="flex items-center justify-between gap-2 text-xs text-slate-500">
+                <span class="font-semibold text-royal-700">${escapeHTML(m.type)}</span>
+                <button
+                  type="button"
+                  onclick="cycleMissionStatus(${m.id})"
+                  class="font-semibold text-cyanbrand-600 hover:underline"
+                  title="Alterar status do projeto"
+                >
+                  ${escapeHTML(m.status)}
+                </button>
+              </div>
+              <h3 class="mt-1 text-sm font-bold text-navy-900">${escapeHTML(m.title)}</h3>
+              <p class="mt-1.5 text-xs text-slate-600 leading-relaxed flex-1">${escapeHTML(m.description)}</p>
+              <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between gap-2 text-xs text-slate-500">
+                <span class="truncate">${escapeHTML(m.location)} · ${escapeHTML(m.leader)}</span>
+                <button type="button" onclick="deleteMission(${m.id})" class="text-slate-400 hover:text-rose-600 p-1 shrink-0" title="Excluir projeto">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+              </div>
+            </div>
+          </div>`
+          )
+          .join('');
+      }
+
+      function handleAddMission(event) {
+        event.preventDefault();
+        const title = document.getElementById('mis-title').value.trim();
+        const type = document.getElementById('mis-type').value;
+        const status = document.getElementById('mis-status').value;
+        const location = document.getElementById('mis-location').value.trim();
+        const leader = document.getElementById('mis-leader').value.trim();
+        const description = document.getElementById('mis-desc').value.trim();
+
+        if (!title || !location || !description) return;
+
+        state.missions.unshift({
+          id: Date.now(),
+          title,
+          type,
+          status,
+          location,
+          leader,
+          description,
+          image: state.pendingMissionImage || '/src/assets/images/admrcm_mission_outreach_1794967010961.jpg',
+        });
+
+        document.getElementById('mission-form').reset();
+        state.pendingMissionImage = '/src/assets/images/admrcm_mission_outreach_1794967010961.jpg';
+        renderAdminMissions();
+        renderPublicMissions();
+        renderChurchPulse();
+        showToast(`Projeto "${title}" publicado!`);
+      }
+
+      function cycleMissionStatus(id) {
+        const m = state.missions.find((item) => item.id === id);
+        if (!m) return;
+        const order = ['Em Andamento', 'Planejado', 'Concluído'];
+        m.status = order[(order.indexOf(m.status) + 1) % order.length];
+        renderAdminMissions();
+        renderPublicMissions();
+      }
+
+      function deleteMission(id) {
+        state.missions = state.missions.filter((m) => m.id !== id);
+        renderAdminMissions();
+        renderPublicMissions();
+        renderChurchPulse();
+        showToast('Projeto missionário removido.', 'info');
+      }
+
+      function renderAllAdmin() {
+        syncCongregationDropdowns();
+        renderTreasury();
+        renderSecretaria();
+        renderDiretoria();
+        renderAdminMissions();
+      }
+
+      // ==================== INITIALIZATION ====================
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('tx-date').valueAsDate = new Date();
+        updateTxCategoryOptions();
+        syncCongregationDropdowns();
+        renderAllSocial();
+
+        // Close modals on Escape key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            closePrayerModal();
+            closeLoginModal();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

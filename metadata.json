@@ -1,0 +1,6 @@
+{
+  "name": "ADMRCM — Ministério Revelando Cristo ao Mundo",
+  "description": "Plataforma integrada da Assembleia de Deus Ministério Revelando Cristo ao Mundo: Mural Social da Igreja, Pedidos de Oração, Tesouraria, Secretaria, Diretoria Geral e Missões.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
